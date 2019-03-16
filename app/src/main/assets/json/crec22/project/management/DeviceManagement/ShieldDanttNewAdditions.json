@@ -1,0 +1,36 @@
+{
+    "code": 1,
+    "data": {
+        "normalInDate": [
+            232,
+            232,
+            242,
+            262,
+            135,
+            192
+        ],
+        "unusualStopDate": [
+            121,
+            111,
+            95,
+            36,
+            85
+        ],
+        "normalStopDate": [
+            36,
+            56,
+            85,
+            99,
+            54
+        ],
+        "monthNo": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    "errorDescription": null
+}

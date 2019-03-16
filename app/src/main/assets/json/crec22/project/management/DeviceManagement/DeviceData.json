@@ -1,0 +1,20 @@
+{
+    "code": 1,
+    "data": {
+        "tbmId": "54a5s4d5sa4d54",
+        "tbmName": "丰田一号",
+        "tbmType": 1,
+        "manageNo": "001",
+        "chargerName": "张三",
+        "manufacturer": "中国",
+        "chargerNumber": " 1345511215 ",
+        "factoryDate": "2019-01-01",
+        "currentLocation": "西安地铁一号线钟楼南门区间左线123环",
+        "buyDate": "2019-01-10",
+        "completeDate": "2019-08-08",
+        "tbmVest": "中铁一局",
+        "availableDate": "2019-09-09",
+        "currentMile": "1235"
+    },
+    "errorDescription": null
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="chart-name" content="环形进度条">
+    <title>盾构机进度图</title>
+    <link rel="stylesheet" href="../../../js/project/risk/XQbQUStlgGlnVrWMZhrb.css"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+<body>
+<div class="chart-wrapper">
+    <canvas id="mountNode"></canvas>
+</div>
+
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+<script src="../../../js/project/risk/f2.min.js"></script>
+<script src="../../../js/project/risk/jquery-3.2.1.min.js"></script>
+<script src="../../../js/project/risk/NjNldKHIVQRozfbAOJUW.js"></script>
+<script>
+function initData(data){
+
+    var text = data[0].y+"%";
+    var chart = new F2.Chart({
+    id: 'mountNode',
+    pixelRatio: window.devicePixelRatio,
+    appendPadding: 3
+    });
+    chart.source(data, {
+      y: {
+        max: 100,
+        min: 0
+      }
+    });
+    chart.axis(false);
+    chart.tooltip(false);
+    chart.coord('polar', {
+      transposed: true,
+      innerRadius: 0.99,
+      radius: 1
+    });
+    chart.guide().arc({
+      start: [0, 0],
+      end: [1, 99.98],
+      top: false,
+      style: {
+        lineWidth: 5,
+        stroke: '#ccc'
+      }
+    });
+    chart.guide().text({
+      position: ['50%', '50%'],
+      content: text,
+      style: {
+        fontSize: 15,
+        fill: '#000000'
+      }
+    });
+    chart.interval().position('x*y').size(5).color('#E4676E').animate({
+      appear: {
+        duration: 1200,
+        easing: 'cubicIn'
+      }
+    });
+    chart.render();
+}
+
+</script>
+</body>
+</html>

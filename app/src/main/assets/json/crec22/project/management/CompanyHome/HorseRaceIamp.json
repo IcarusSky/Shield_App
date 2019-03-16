@@ -1,0 +1,86 @@
+{
+  "code": 1,
+  "data": {
+    "inProject": 20,
+    "inLine": 87,
+    "totalLong": 34361,
+    "finish": 10188,
+    "tbmNumber": 0,
+    "free": 0,
+    "lease": 0,
+    "workNow": 0,
+    "finishProject": [
+      {
+        "projectName": "西安地铁9-1标",
+        "lineName": "纺香区间左线",
+        "finishTime": "2019-01-31"
+      },
+      {
+        "projectName": "西安地铁9-1标",
+        "lineName": "纺香区间右线",
+        "finishTime": "2018-12-31"
+      },
+      {
+        "projectName": "青岛地铁1号线土建一标8工区工程",
+        "lineName": "沟东区间左线",
+        "finishTime": "2018-11-25"
+      },
+      {
+        "projectName": "成都轨道交通8号线一期工程2标",
+        "lineName": "顺三区间右线",
+        "finishTime": "2018-08-31"
+      },
+      {
+        "projectName": "厦门本岛至翔安过海段二工区工程",
+        "lineName": "刘东区间左线",
+        "finishTime": "2018-07-24"
+      },
+      {
+        "projectName": "厦门市轨道交通2号线TI03-3工程",
+        "lineName": "高林停车场区间右线",
+        "finishTime": "2018-11-10"
+      },
+      {
+        "projectName": "厦门市轨道交通2号线TI03-3工程",
+        "lineName": "高~湿区间左线",
+        "finishTime": "2018-04-30"
+      },
+      {
+        "projectName": "厦门市轨道交通2号线TI03-3工程",
+        "lineName": "高~湿区间右线",
+        "finishTime": "2018-04-10"
+      },
+      {
+        "projectName": "成都轨道交通8号线一期工程2标",
+        "lineName": "出入段线北1线",
+        "finishTime": "2018-04-10"
+      },
+      {
+        "projectName": "无锡地铁3号线05标土建施工工程",
+        "lineName": "无山区间左线",
+        "finishTime": "2018-02-15"
+      },
+      {
+        "projectName": "青岛地铁1号线土建一标8工区工程",
+        "lineName": "春沟区间左线",
+        "finishTime": "2017-12-30"
+      },
+      {
+        "projectName": "厦门市轨道交通2号线TI03-3工程",
+        "lineName": "金高区间左线",
+        "finishTime": "2017-08-15"
+      },
+      {
+        "projectName": "厦门市轨道交通2号线TI03-3工程",
+        "lineName": "金高区间右线",
+        "finishTime": "2017-07-15"
+      },
+      {
+        "projectName": "南京地铁河西九号D7-TA01标",
+        "lineName": "螺高区间左线",
+        "finishTime": "2018-10-10"
+      }
+    ]
+  },
+  "errorDescription": null
+}

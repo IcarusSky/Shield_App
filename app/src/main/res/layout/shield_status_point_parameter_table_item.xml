@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/shield_status_point_parameter_table_item">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TableLayout
+            android:id="@+id/PointParameterTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
+            <TableRow
+                android:background="@color/gray5"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                >
+                <TextView
+                    android:id="@+id/point_name"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="111"
+                    />
+
+                <TextView
+                    android:id="@+id/real_value"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="222"
+                    />
+
+                <TextView
+                    android:id="@+id/unit"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="111"
+                    />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="111"
+                    />
+
+                <TextView
+                    android:background="@drawable/bonus_list_item_divider"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

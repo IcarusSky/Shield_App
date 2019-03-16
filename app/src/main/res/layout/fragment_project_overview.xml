@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-2dp"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/sp15"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="18dp">
+                <!--项目-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="20dp"
+                        android:textSize="16sp"
+                        android:text="项目：" />
+
+                    <TextView
+                        android:id="@+id/tx_project"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+
+                        android:paddingTop="20dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--计划工期-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="@dimen/sp10"
+                        android:textSize="16sp"
+                        android:text="计划工期:" />
+
+                    <TextView
+                        android:id="@+id/tx_plan_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+
+                        android:paddingBottom="5dp"
+                        android:textSize="16sp"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--区间里程-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="@dimen/sp10"
+                        android:textSize="16sp"
+                        android:text="区间里程:" />
+
+                    <TextView
+                        android:id="@+id/tx_interval_mileage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+
+                        android:paddingBottom="5dp"
+                        android:textSize="16sp"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--地质条件-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="@dimen/sp10"
+                        android:textSize="16sp"
+                        android:text="地质条件:" />
+
+                    <TextView
+                        android:id="@+id/tx_condition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+
+                        android:paddingBottom="5dp"
+                        android:textSize="16sp"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--线型路线-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="@dimen/sp10"
+                        android:textSize="16sp"
+                        android:text="线路线型:" />
+
+                    <TextView
+                        android:id="@+id/tx_line_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:paddingBottom="5dp"
+
+                        android:textSize="16sp"
+                        android:text="直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线直线"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--管片规格-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="@dimen/sp10"
+                        android:textSize="16sp"
+                        android:text="管片规格:" />
+
+                    <TextView
+                        android:id="@+id/tx_tube"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+
+                        android:textSize="16sp"
+                        android:paddingBottom="5dp"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--拟投入资源-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="@dimen/sp10"
+                        android:textSize="16sp"
+                        android:text="拟投入资源:" />
+
+                    <TextView
+                        android:id="@+id/tx_invest_resource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+
+                        android:paddingBottom="5dp"
+                        android:textSize="16sp"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--项目经理-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="@dimen/sp10"
+                        android:textSize="16sp"
+                        android:text="项目经理:" />
+
+                    <TextView
+                        android:id="@+id/tx_manager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+
+                        android:paddingBottom="5dp"
+                        android:textSize="16sp"
+                         />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="@dimen/sp20"
+                    android:paddingTop="5dp"
+                    android:text="平面图"
+                    android:textSize="@dimen/sp16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC" />
+                <!--平面图的轮播-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_plane_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:padding="4dp" />
+                    <!--小圆点-->
+                    <LinearLayout
+                        android:id="@+id/dot_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="32dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="@dimen/sp20"
+                    android:paddingTop="5dp"
+                    android:text="纵断面图"
+                    android:textSize="@dimen/sp16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC" />
+                <!--纵断面图轮播-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_vertical_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:padding="4dp" />
+                    <!--小圆点-->
+                    <LinearLayout
+                        android:id="@+id/dot_horizontal01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="32dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+

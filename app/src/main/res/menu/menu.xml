@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/overview"
+        android:enabled="true"
+        android:icon="@drawable/bottom_png_overview"
+        android:title="总览"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/project"
+        android:enabled="true"
+        android:icon="@drawable/bottom_png_project"
+        android:title="项目"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/message"
+        android:enabled="true"
+        android:icon="@drawable/bottom_png_message"
+        android:title="消息"
+        app:showAsAction="ifRoom"/>
+
+</menu>

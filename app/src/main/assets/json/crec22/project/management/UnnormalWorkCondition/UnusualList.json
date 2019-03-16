@@ -1,0 +1,33 @@
+{
+    "Id": 1,
+    "data": [
+        {
+            "unusualId": "001",
+            "start_num": 564,
+            "end_num": 586,
+            "unusual_level": "Ⅱ 级",
+            "unusual_content": "钟宅地下通道，基础结构为条形基础，基础埋深4.7米，机房基础埋深6.05，该通道基础距区间隧道顶部4.06米。",
+            "cross_building": "钟宅地下通道",
+            "status": "已解决"
+        },
+        {
+            "unusualId": "002",
+            "start_num": 982,
+            "end_num": 1018,
+            "unusual_level": "Ⅱ 级",
+            "unusual_content": "金山路～枋湖北二路地下行车通道，地下行车道空间位置关系为斜交，通道部分采用桩基支护，桩基形式为人工挖孔桩和钻孔灌注桩，区间隧道下穿通道段，与行车通道最小竖向净距7.08米；下穿结束后区间隧道在平面上避开行车通道，与围护桩最小竖向净距约1.36米，最小水平净距1.4米，区间隧道与通道底板最小竖向净距为6.26米。",
+            "cross_building": "金山路~枋湖北路地下行车通道",
+            "status": "未解决"
+        },
+        {
+            "unusualId": "003",
+            "start_num": 1011,
+            "end_num": 1017,
+            "unusual_level": "Ⅱ 级",
+            "unusual_content": "云顶北路东侧地下通道基础形式为条形基础，基础埋深5.6m，机房基础埋深7.0m。该地下通道基础距区间隧道顶部5.19m。",
+            "cross_building": "云顶北路地下通道",
+            "status": "未解决"
+        }
+    ],
+    "errorDescription": null
+}

@@ -1,0 +1,216 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="chart-name" content="风险排名">
+    <link href="../../../css/bracket.css" rel="stylesheet" type="text/css"/>
+    <title>风险排名</title>
+</head>
+
+<body>
+<div style="position: relative;height: 450px;background-color: white;">
+    <div id="container" style="width: calc(100vw - 30px);height: 100%;float: left;">
+    </div>
+    <div>
+        <button id="stepInto" class="btn btn-outline-info" onclick="enterDetail()" style="position: absolute;width: 20px;height:100px;padding: 0px 0px;font-size: 12px;">点<br>击<br>进<br>入<br>详<br>情</button>
+    </div>
+</div>
+</body>
+
+<script src="../../../lib/highcharts.js"></script>
+<script src="../../../lib/jquery-2.1.4.min.js"></script>
+<script src="../../../lib/underscore.js"></script>
+<script>
+     var _selectprojectRisk = null;
+     function callJS(result){
+        var data = result.data.data;
+
+        var xdata = _.pluck(data, 1);
+        var level1 = _.pluck(data, 2);
+        var level2 = _.pluck(data, 3);
+        var level3 = _.pluck(data, 4);
+        var level4 = _.pluck(data, 5);
+        var flagx = true; //表示项目名称不全为null
+        var flags = true; //表示项目名称全不为null
+        var l = 0;
+        for (var i in xdata) {
+            if (xdata[i] === "null" || xdata[i] == null) {
+                l++;
+            }
+        }
+        if (l == xdata.length) {
+            flagx = false; //表示项目名称全为null
+        } else if (l < xdata.length && l > 0) {
+            flags = false; //表示项目名称有null，但是不全为null
+        }
+
+        level1 = formateDataLevel(level1);
+        level2 = formateDataLevel(level2);
+        level3 = formateDataLevel(level3);
+        level4 = formateDataLevel(level4);
+
+        var flag1 = nullJudge(level1);
+        var flag2 = nullJudge(level2);
+        var flag3 = nullJudge(level3);
+        var flag4 = nullJudge(level4);
+
+        if (data.length != 0 && flagx) {
+            if (flags) {
+                if (flag1 && flag2 && flag3 && flag4) {
+                    level1 = nullFormate(level1);
+                    level2 = nullFormate(level2);
+                    level3 = nullFormate(level3);
+                    level4 = nullFormate(level4);
+                    initChart();
+                } else {
+                    if (flag1 || flag2 || flag3 || flag4) {
+                        level1 = nullFormate(level1);
+                        level2 = nullFormate(level2);
+                        level3 = nullFormate(level3);
+                        level4 = nullFormate(level4);
+                        initChart();
+                    } else {
+                        document.getElementById("datanull").innerHTML = "暂无数据";
+                        document.getElementById("stepInto").style.display = "none";
+                        document.getElementById("frame").style.height = "30px";
+                    }
+                }
+            } else {
+                document.getElementById("datanull").innerHTML = "数据有误";
+                document.getElementById("stepInto").style.display = "none";
+                document.getElementById("frame").style.height = "30px";
+            }
+        } else {
+            document.getElementById("datanull").innerHTML = "暂无数据";
+            document.getElementById("stepInto").style.display = "none";
+            document.getElementById("frame").style.height = "30px";
+        }
+
+        function formateDataLevel(unfDataLevel) {
+            var _temp1 = [];
+            for (var j in unfDataLevel) {
+                var data = new Number(unfDataLevel[j]);
+                _temp1.push(data.valueOf());
+            }
+            return _temp1;
+        }
+
+        function nullFormate(dataNotNull) {
+            for (var k in dataNotNull) {
+                if (dataNotNull[k] == 0) {
+                    dataNotNull[k] = null;
+                }
+            }
+            return dataNotNull;
+        }
+
+        function nullJudge(dataNotNull) {
+            var flag = false;
+            for (var x in dataNotNull) {
+                if (dataNotNull[x] != 0) {
+                    flag = true; //表示有数据，数据不全为0
+                }
+            }
+            return flag;
+        }
+
+        function initChart() {
+            var chart = Highcharts.chart('container', {
+                chart: {
+                    type: 'bar',
+                    marginLeft: 75,
+                    marginRight: 30
+                },
+                credits: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: xdata,
+                    tickWidth: 0.5,
+                    tickLength: 3,
+                    labels: {
+                        rotation: -45, // 设置轴标签旋转角度
+                        step: 1,
+                        staggerLines: 2,
+                        formatter: function () {
+                            return this.value.substr(0, 6);
+
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    allowDecimals: false,
+                    title: {
+                        text: '风险源个数',
+                        align: 'high'
+                    }
+                },
+                tooltip: {
+                    formatter: function (e) {
+                        var _name = this.point.category;
+                        var _index = 0;
+                        var selpoint = _.find(data, function (item, index) {
+                            _index = index;
+                            return item[1] === _name;
+                        });
+                        _selectprojectRisk = selpoint[0];
+                        $("#stepInto").css("top", _index * 33 + "px");
+                        return selpoint[1] + '<br/>' + this.series.name + ':<b>' + this.y +
+                            '<b/>';
+                    }
+                },
+                legend: { /* 图例显示顺序反转 * 这是因为堆叠的顺序默认是反转的，可以设置 * yAxis.reversedStacks = false 来达到类似的效果 */
+                    reversed: true,
+                    itemStyle: {
+                        fontWeight: 'normal',
+                        fontSize: "15px"
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        pointWidth: 25,
+                        dataLabels: {
+                            align: 'center',
+                            color: 'white',
+                            style: {
+                                textOutline: "0.5px 0.5px #333"
+                            },
+                            enabled: true
+                        },
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                    name: 'IV级',
+                    data: level4,
+                    color: '#15D2B8'
+                }, {
+                    name: 'III级',
+                    data: level3,
+                    color: '#77ACFF'
+                }, {
+                    name: 'II级',
+                    data: level2,
+                    color: '#F9B800'
+                }, {
+                    name: 'I级',
+                    data: level1,
+                    color: '#EA66A1'
+                }]
+            });
+        }
+    }
+    function enterDetail() {
+        android.testbackRisk(_selectprojectRisk);
+    }
+</script>
+
+</html>

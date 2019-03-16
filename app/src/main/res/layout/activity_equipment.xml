@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@color/gray5"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/radio"
+            android:minHeight="?attr/actionBarSize">
+
+            <!--<TextView-->
+            <!--android:id="@+id/toolbar_title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:singleLine="true"-->
+            <!--android:text=""-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="21sp" />-->
+
+            <ImageView
+                android:id="@+id/btn_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/back_white" />
+
+            <Spinner
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="12dp"
+                android:overlapAnchor="false"
+                android:spinnerMode="dialog"
+                android:text="--" />
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/gray5"
+            android:paddingLeft="5dp">
+
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:gravity="center"
+                    android:text="设备管理"
+                    android:textColor="@color/radio"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela1"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_alignParentTop="true"
+                    android:text="设备基本信息"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="15dp"
+                    android:textSize="20sp" />
+                <View
+                    android:id="@+id/linea"
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:layout_below="@+id/txt2"
+                    android:background="@color/gray" />
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linea"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:text="设备名称:"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/tbmName"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt3"
+                    android:layout_alignBottom="@+id/txt3"
+                    android:layout_toRightOf="@+id/txt3"
+                    android:textSize="13sp"
+                     />
+
+                <TextView
+                    android:id="@+id/txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt3"
+                    android:paddingLeft="15dp"
+                    android:text="设备类型:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tbmType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt4"
+                    android:layout_toRightOf="@+id/txt4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt4"
+                    android:paddingLeft="15dp"
+                    android:text="管理号:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/manageNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt5"
+                    android:layout_toRightOf="@+id/txt5"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt5"
+                    android:paddingLeft="15dp"
+                    android:text="管理负责人:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/chargerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt6"
+                    android:layout_toRightOf="@+id/txt6"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt6"
+                    android:paddingLeft="15dp"
+                    android:text="生产厂商:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/manufacturer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt7"
+                    android:layout_toRightOf="@+id/txt7"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt7"
+                    android:paddingLeft="15dp"
+                    android:text="联系方式:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/chargerNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt8"
+                    android:layout_toRightOf="@+id/txt8"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt8"
+                    android:paddingLeft="15dp"
+                    android:text="累计掘进里程:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/currentMile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt9"
+                    android:layout_toRightOf="@+id/txt9"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txt3"
+                    android:layout_marginLeft="100dp"
+                    android:layout_toRightOf="@id/txt3"
+                    android:paddingTop="10dp"
+                    android:text="出厂日期:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/factoryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt10"
+                    android:layout_toRightOf="@+id/txt10"
+                    android:paddingTop="10dp"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt10"
+                    android:layout_alignStart="@id/txt10"
+                    android:orientation="horizontal"
+                    android:paddingRight="15sp">
+
+                    <TextView
+                        android:id="@+id/txt11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前位置:"
+                        android:textSize="13sp" />
+                        <!--android:layout_alignLeft="@id/txt10"-->
+                        <!--android:layout_alignBottom="@id/txt4"-->
+
+
+                    <TextView
+                        android:id="@+id/currentLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp" />
+                        <!--android:layout_alignTop="@+id/txt11"-->
+                        <!--android:layout_toRightOf="@+id/txt11"-->
+
+
+                </LinearLayout>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/txt11"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignLeft="@id/txt10"-->
+                    <!--android:layout_alignBottom="@id/txt4"-->
+                    <!--android:text="当前位置:"-->
+                    <!--android:textSize="16sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/currentLocation"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignTop="@+id/txt11"-->
+                    <!--android:layout_toRightOf="@+id/txt11"-->
+                    <!--android:textSize="16sp" />-->
+
+                <TextView
+                    android:id="@+id/txt12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt10"
+                    android:layout_below="@id/line1"
+                    android:text="购买日期:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/buyDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt12"
+                    android:layout_toRightOf="@+id/txt12"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/txt13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt10"
+                    android:layout_below="@id/txt12"
+                    android:text="出洞时间:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/completeDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt13"
+                    android:layout_toRightOf="@+id/txt13"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt10"
+                    android:layout_below="@id/txt13"
+                    android:text="资产归属:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tbmVest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt14"
+                    android:layout_toRightOf="@+id/txt14"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt10"
+                    android:layout_below="@id/txt14"
+                    android:text="可调配时间:"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/availableDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt15"
+                    android:layout_toRightOf="@+id/txt15"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rela1"
+                android:layout_marginTop="2sp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true">
+
+
+                <TextView
+                    android:id="@+id/txt16"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:paddingLeft="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:text="运行功效统计"
+                    android:textSize="20sp"
+
+                    />
+                <View
+                    android:id="@+id/lineb"
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:layout_below="@+id/txt16"
+                    android:background="@color/gray"
+                    />
+                <com.github.mikephil.charting.charts.CombinedChart
+                    android:id="@+id/bar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_below="@+id/lineb"
+                    android:layout_alignParentBottom="true"
+                     />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,26 @@
+{
+  "code": 1,
+  "data": [
+    {
+      "cameraId": "07b18bb8-0c12-42db-9a9f-1657622e9cf0",
+      "ip": "111.3.30.102",
+      "port": 8000,
+      "username": "admin",
+      "password": "jk123456",
+      "channel": []
+    },
+    {
+      "cameraId": "1",
+      "ip": "111.3.30.103",
+      "port": 8000,
+      "username": "admin",
+      "password": "jk123456",
+      "channel": [
+        35,
+        36,
+        37
+      ]
+    }
+  ],
+  "errorDescription": null
+}

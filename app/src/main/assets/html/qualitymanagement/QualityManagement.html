@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="width:100%; height: 100%"></div>
+<script src="../../lib/echarts.js"></script>
+<script src="../../lib/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+ function initData(data) {
+ var PiePic = data.data;
+ var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = '嵌套环形图';
+
+option = {
+    tooltip: {
+        trigger: 'item',
+        confine: true,
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+  //  legend: {
+  //      orient: 'vertical',
+  //      x: 'left',
+  //       data:['环片错台','管片平偏','管片高偏','管片错台']
+  // },
+    series: [
+        {
+            name:'',
+            type:'pie',
+            selectedMode: 'single',
+            radius: [0, '30%'],
+            label: {
+                normal: {
+                    position: 'inner'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:PiePic.abnormal, name:'异常', selected:true},
+                {value:PiePic.normal, name:'正常'}
+            ]
+        },
+        {
+            name:'',
+            type:'pie',
+            radius: ['38%', '50%'],
+            labelLine : {
+                 normal : {
+                 length : 4,
+                 length2 : 8
+             }
+             },
+            label: {
+                normal: {
+                   formatter: '{a|{a}}{abg|}{b|{b}：} \n {c}   {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    // shadowBlur:3,
+                    // shadowOffsetX: 2,
+                    // shadowOffsetY: 2,
+                    // shadowColor: '#999',
+                    // padding: [0, 7],
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 15,
+                            align: 'center'
+                        },
+                        // abg: {
+                        //     backgroundColor: '#333',
+                        //     width: '100%',
+                        //     align: 'right',
+                        //     height: 22,
+                        //     borderRadius: [4, 4, 0, 0]
+                        // },
+
+                        b: {
+                            fontSize: 10,
+                            lineHeight: 1
+                        },
+                        per: {
+                            color: 'rgb(220,170, 0)',
+                            padding: [1,1],
+                            borderRadius: 1
+                        }
+                    }
+                }
+            },
+            data:[
+                {value:PiePic.ringDislocation, name:'环片错台'},
+                {value:PiePic.horizontal, name:'管片平偏'},
+                {value:PiePic.vertical, name:'管片高偏'},
+                {value:PiePic.tubeDislocation, name:'管片错台'}
+            ]
+        }
+    ]
+};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+
+
+ }
+
+
+
+
+</script>
+</body>
+</html>

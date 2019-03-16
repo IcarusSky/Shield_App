@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_main"
+        android:enabled="true"
+        android:icon="@drawable/project_bottom_overview"
+        android:title="@string/bottom_main"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_project"
+        android:enabled="true"
+        android:icon="@drawable/project_bottom_excavation"
+        android:title="@string/bottom_project"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_message"
+        android:enabled="true"
+        android:icon="@drawable/project_bottom_camera"
+        android:title="@string/bottom_message"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_personal"
+        android:enabled="true"
+        android:icon="@drawable/project_bottom_personal"
+        android:title="@string/bottom_personal"
+        app:showAsAction="ifRoom" />
+
+</menu>

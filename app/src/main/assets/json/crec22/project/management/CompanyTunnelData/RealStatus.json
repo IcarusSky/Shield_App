@@ -1,0 +1,21 @@
+{
+  "code": 1,
+  "data": {
+    "shield_id": "fc8392df2c694290abc3abb6f766490c",
+    "shield_photo": null,
+    "shield_name": "海瑞克S735",
+    "shield_status": "掘进中",
+    "shield_data_status": "数据连接中",
+    "shield_data_time": "2019-01-28 14:14:32",
+    "driving_circle_num": "320",
+    "schedule": "34%",
+    "horizontal_forward_point": "-26.48",
+    "horizontal_back_point": "-13.47",
+    "horizontal_trend": "-3.21",
+    "guide_progress": "20082.38米",
+    "vertical_forward_point": "-21.74",
+    "vertical_back_point": "3.19",
+    "vertical_trend": "-6.14"
+  },
+  "errorDescription": null
+}

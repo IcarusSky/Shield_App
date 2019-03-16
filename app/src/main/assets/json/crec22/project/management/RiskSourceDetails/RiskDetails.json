@@ -1,0 +1,19 @@
+{
+    "code": 1,
+    "data": {
+        "riskCode": "121d2s1d",
+        "riskName": "施工阶段盾构隧道上浮(硬岩)",
+        "riskLevel": 2,
+        "startRegion": 165,
+        "endRegion": 177,
+        "risk": 568.5,
+        "riskMileage": "垂直通过",
+        "feedStatus": 1,
+        "riskEvents": "覆土深埋5米，位于断面5-1粉质黏土",
+        "RiskConsequence": "接收存在涌水，涌沙，掌子面坍塌的风险",
+        "riskPhoto": "",
+        "feedUser": "张三",
+        "greateDate": "2019-03-08"
+    },
+    "errorDescription": null
+}

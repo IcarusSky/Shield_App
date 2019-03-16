@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingBottom="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_green_d" />
+
+            <com.crec.shield.weidget.DashLineView
+                android:id="@+id/ll_line"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_red_d" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/station"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_weight="1.8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/station_start"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/text_com_color"
+                android:text="刘东区刘东区"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/station_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="3dp"
+                android:lineSpacingExtra="2dp"
+                android:gravity="left"
+                android:textColor="@color/text_com_color"
+                android:text="临海区临海区"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/prompt_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginBottom="4dp"
+                android:text="临近到达提示："
+                android:textColor="@color/text_com_color"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/prompt_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingBottom="4dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text=""
+                    android:textColor="@color/text_com_color"
+                    android:textSize="@dimen/sp13" />
+
+                <!--<TextView
+                    android:id="@+id/prompt_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingBottom="5dp"
+                    android:text="即将到达"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/sp12" />-->
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/remain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_com_color"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/remaining_rings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/expect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_com_color"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/arrive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_com_color"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <!--<TextView-->
+            <!--android:id="@+id/prompt_arrivalTime"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="@dimen/sp12"-->
+            <!--android:text="剩余20环预计8月5日到达"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="left" />-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/prompt_dayortime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="距离到达还有"
+                    android:textColor="@color/text_com_color"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/prompt_residualTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="3天"
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/sp13" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_line"
+        android:background="@color/line_gray" />
+</LinearLayout>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>风险源统计甘特图</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+
+<script src="../../../lib/highcharts.js"></script>
+<script src="../../../lib/oldie.js"></script>
+<script src="../../../lib/xrange.js"></script>
+<script src="../../../lib/jquery-1.8.3.min.js"></script>
+<script src="../../../lib/underscore.js"></script>
+<body>
+    <span id='datanull' style="font-size:14px;color:gray;text-align:center;display:block;"></span>
+    <div id="container" style="width:100%;height: 230px;"></div>
+</body>
+<script>
+    function initData(data){
+        var RiskHighChart = data.data;
+        var risk = [];
+        var _temp = [];
+        var _temp1 = [];
+
+        if (RiskHighChart.risk.length != 0) {
+            if (RiskHighChart.risk[0]["x"] == null || RiskHighChart.risk[0]["x2"] == null || RiskHighChart.risk[
+                    0][
+                    "y"
+                ] == null ||
+                RiskHighChart.ring_num == null) {
+                document.getElementById("datanull").innerHTML = "暂无数据";
+            } else {
+                $("#datanull").innerHTML = "";
+                initChart();
+            }
+        } else {
+            document.getElementById("datanull").innerHTML = "暂无数据";
+        }
+
+
+        function initChart() {
+
+            for (var i in RiskHighChart.risk) {
+                var riskItem = {};
+                riskItem.x = RiskHighChart.risk[i]["x"];
+                _temp1.push(RiskHighChart.risk[i]["x"]);
+                riskItem.x2 = RiskHighChart.risk[i]["x2"];
+                _temp.push(RiskHighChart.risk[i]["x2"]);
+                riskItem.y = (RiskHighChart.risk[i]["y"] - 1);
+                risk.push(riskItem);
+            }
+            _temp1.push(RiskHighChart.ring_num);
+
+            var max = _.max(_temp);
+            var min = _.min(_temp1);
+            var currentRing = '当前' + RiskHighChart.ring_num + '环';
+
+            var chart = new Highcharts.Chart('container', {
+                chart: {
+                    type: 'xrange',
+                    spacing: [35, 5, 0, 0],
+                    marginLeft: 35
+                },
+                title: {
+                    text: ''
+                },
+                credits: {
+                    enabled: false
+                },
+                xAxis: {
+                    type: 'number',
+                    title: {
+                        text: '环数',
+                        align: 'high'
+                    },
+                    floor: 0,
+                    tickInterval: 1,
+                    endOnTick: true,
+                    showLastLabel: true,
+                    startOnTick: false,
+                    startOnTick: true,
+                    softMax: max,
+                    softMin: min,
+                    labels: {
+                        style: {
+                            fontSize: "10px"
+                        }
+                    },
+                    plotBands: [{
+                        color: '#FF0000',
+                        from: RiskHighChart.ring_num,
+                        to: RiskHighChart.ring_num + 0.15,
+                        label: {
+                            text: currentRing,
+                            fontSize: "5px",
+                            textAlign: 'center',
+                            y: -8
+                        }
+                    }]
+                },
+                yAxis: {
+                    type: 'category',
+                    title: {
+                        text: '风险源等级',
+                        align: 'high',
+                        offset: 0,
+                        rotation: 0,
+                        x: 30,
+                        y: -25
+                    },
+                    categories: ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ'],
+                    reversed: false
+                },
+                tooltip: {
+                    followPointer: true,
+                    followTouchMove: true
+                },
+                legend: {
+                    enabled: false
+                },
+                series: [{
+                    name: '风险源',
+                    pointWidth: 12,
+                    colors: ['#ea66a1', '#f9b800', '#5a7bef', '#15d2b8'],
+                    data: risk,
+                    dataLabels: {
+                        enabled: false
+                    }
+                }]
+            });
+        }
+    }
+</script>
+
+</html>

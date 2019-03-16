@@ -1,0 +1,36 @@
+{
+  "data": [{
+    "type":1,
+    "line": "大连地铁三号线刘东区间左线",
+    "ring": 30,
+    "date": "2018.8.16",
+    "day": 10,
+    "startStation":"刘东区",
+    "endStation":"临海区"
+  },{
+    "type":0,
+    "line": "大连地铁三号线刘东区间左线",
+    "ring": 20,
+    "date": "2018.8.20",
+    "day": "",
+    "startStation":"刘东区",
+    "endStation":"临海区"
+  },{
+    "type":1,
+    "line": "大连地铁三号线刘东区间左线",
+    "ring": 30,
+    "date": "2018.8.16",
+    "day": 10,
+    "startStation":"刘东区",
+    "endStation":"临海区"
+  },{
+    "type":0,
+    "line": "大连地铁三号线刘东区间左线",
+    "ring": 20,
+    "date": "2018.8.20",
+    "day": "",
+    "startStation":"刘东区",
+    "endStation":"临海区"
+  }],
+  "success": "true"
+}

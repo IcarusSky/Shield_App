@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="textBig">35sp</dimen>
+    <dimen name="ten_sp">10sp</dimen>
+    <dimen name="sp13">13sp</dimen>
+    <dimen name="sp23">23sp</dimen>
+    <dimen name="sp15">15sp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp17">17sp</dimen>
+    <dimen name="sp10">10sp</dimen>
+    <dimen name="item_height">20dp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp19">19sp</dimen>
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp25">25sp</dimen>
+    <dimen name="sp30">30sp</dimen>
+
+    <dimen name="item_size">60dp</dimen>
+    <dimen name="item_margin">4dp</dimen>
+    <dimen name="item_text_size">18sp</dimen>
+    <dimen name="item_text_size_small">9sp</dimen>
+    <dimen name="expandable_selector_margin">10dp</dimen>
+    <dimen name="background_radius">100dp</dimen>
+    <dimen name="dimen_line">1dp</dimen>
+    <dimen name="grid_expected_size">120dp</dimen>
+
+    <dimen name="textSize_sidebar">10sp</dimen>
+    <dimen name="large_textSize_sidebar">32sp</dimen>
+    <dimen name="textSize_sidebar_choose">12sp</dimen>
+    <dimen name="textSize_sidebar_padding">20sp</dimen>
+    <dimen name="radius_sidebar">25dp</dimen>
+    <dimen name="ball_radius_sidebar">28dp</dimen>    <!-- Circular Progress Bar Sizes -->
+    <item format="float" type="dimen" name="circular_progress_bar_inner_radius_ratio">3</item>
+    <item format="float" type="dimen" name="circular_progress_bar_thickness_ratio">10</item>
+</resources>

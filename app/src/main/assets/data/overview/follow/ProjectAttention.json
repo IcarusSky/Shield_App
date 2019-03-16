@@ -1,0 +1,59 @@
+{
+  "code":1,
+  "data":[
+    {
+      "id": 1,
+      "area": "华南片区",
+      "project": "南京地铁5号线",
+      "status": "掘进中",
+      "today_rings": 13,
+      "present_rings": 193,
+      "total_rings": 846,
+      "isAttention": 1,
+      "lines": [
+        {
+          "id": 1,
+          "line_area": "阳春路站--沟岔村站区间",
+          "line": "左",
+          "today_rings": 6,
+          "present_rings": 90,
+          "total_rings": 400
+        },
+        {
+          "id": 2,
+          "line_area": "阳春路站--沟岔村站区间",
+          "line": "右",
+          "today_rings": 7,
+          "present_rings": 60,
+          "total_rings": 430
+        }
+      ]
+    },{
+      "id": 1,
+      "area": "华东片区",
+      "project": "深圳地铁6号线",
+      "status": "掘进中",
+      "today_rings": 13,
+      "present_rings": 193,
+      "total_rings": 846,
+      "isAttention": 1,
+      "lines": [
+        {
+          "id": 1,
+          "line_area": "A站--B站区间",
+          "line": "左",
+          "today_rings": 6,
+          "present_rings": 90,
+          "total_rings": 400
+        }, {
+          "id": 2,
+          "line_area": "A站--B站区间",
+          "line": "右",
+          "today_rings": 7,
+          "present_rings": 90,
+          "total_rings": 400
+        }
+      ]
+    }
+  ]
+}

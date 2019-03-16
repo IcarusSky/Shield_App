@@ -1,0 +1,12 @@
+{
+    "code": 1,
+    "data": {
+        "abnormal": 15,
+        "normal": 95,
+        "tubeDislocation": 135,
+        "ringDislocation":335,
+        "vertical": 234,
+        "horizontal": 310
+    },
+    "errorDescription": null
+}

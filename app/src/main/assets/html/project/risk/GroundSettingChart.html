@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="chart-name" content="地面沉降统计图">
+    <title>地面沉降统计图</title>
+</head>
+
+<body>
+    <span id='datanull' style="font-size:14px;color:gray;text-align:center;display:block;"></span>
+    <div id="container" style="width: 100%;height: 250px;">
+</div>
+</body>
+
+<script src="../../../lib/echarts.js"></script>
+<script src="../../../lib/jquery-2.1.4.min.js"></script>
+
+<script>
+  function initData(data) {
+    var mainContainer = document.getElementById('container');
+    //用于使chart自适应高度和宽度,通过窗体高宽计算容器高宽
+    var resizeMainContainer = function () {
+      mainContainer.style.width = window.innerWidth * 0.95 + 'px';
+    };
+    //设置div容器高宽
+    resizeMainContainer();
+    // 初始化图表
+    var mainChart = echarts.init(mainContainer);
+    $(window).on('resize', function () { //
+      //屏幕大小自适应，重置容器高宽
+      resizeMainContainer();
+      mainChart.resize();
+    });
+
+    var data = data.data;
+    var nowchange = [];
+    var totalchange = [];
+    var length = 0;
+    for (var i in data) {
+      length++;
+    }
+
+    if (length != 0) {
+      if (data.code.length == 0 || data.nowchange[0] == null || data.totalchange[0] == null || data.code[0] == null ||
+        data.code[0] === "null" || data.danger[0] == null) {
+        document.getElementById("datanull").innerHTML = "暂无数据";
+      } else {
+        $("#datanull").innerHTML = "";
+        initChart();
+      }
+    } else {
+      document.getElementById("datanull").innerHTML = "暂无数据";
+    }
+
+    function util(value) {
+      var temp;
+      if (value >= 0) {
+        temp = '+' + value;
+      } else if (value < 0) {
+        temp = value;
+      } else {
+        temp = '';
+      }
+      return temp;
+    }
+
+    function initChart() {
+      for (var i in data.nowchange) {
+        nowchange.push(util(data.nowchange[i]));
+      }
+      for (var j in data.totalchange) {
+        totalchange.push(util(data.totalchange[j]));
+      }
+      var myChart = echarts.init(document.getElementById('container'));
+      var option = {
+        backgroundColor: '#fff',
+        color: ['#CD6090', '#146fb9', '#9AFF9A'],
+        tooltip: {
+          trigger: 'axis',
+          textStyle: {
+            fontSize: 10,
+            lineHeight: 15,
+          },
+        },
+        legend: {
+          data: [{
+            name: '预警线',
+            icon: 'circle'
+          }, {
+            name: '本次变化量',
+            icon: 'circle'
+          }, {
+            name: '累计变化量',
+            icon: 'circle'
+          }],
+          x: 'center',
+          top: '92%',
+          textStyle: {
+            fontSize: 15
+          },
+          itemHeight: 14,
+          itemWidth: 14,
+          itemGap: 8
+        },
+        grid: {
+          left: '0%',
+          right: 0,
+          top: '3%',
+          bottom: '25px',
+          containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          data: data.code,
+          axisLabel: {
+            fontSize: 8,
+            fontWeight: 'normal'
+          },
+          axisTick: {
+            show: false
+          },
+          axisLine: {
+            show: false
+          }
+        },
+        yAxis: {
+          type: 'value',
+          axisLabel: {
+            fontSize: 8,
+            fontWeight: 'normal'
+          },
+          axisTick: {
+            show: false
+          },
+          splitLine: {
+            lineStyle: {
+              color: ['#edeaea']
+            }
+          },
+          axisLine: {
+            show: false,
+            lineStyle: {
+              color: '#292929',
+              width: 1
+            }
+          }
+        },
+        series: [{
+          name: '预警线',
+          type: 'line',
+          smooth: true,
+          data: data.danger,
+          symbolSize: 0,
+          label: {
+            show: true,
+            formatter: '{a}'
+          }
+        }, {
+          name: '本次变化量',
+          type: 'line',
+          smooth: true,
+          data: totalchange,
+          symbolSize: 1,
+        }, {
+          name: '累计变化量',
+          type: 'line',
+          smooth: true,
+          data: nowchange,
+          symbolSize: 1,
+        }]
+      };
+      myChart.setOption(option);
+    }
+  }
+</script>
+
+
+</html>

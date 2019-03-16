@@ -1,0 +1,238 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="UTF-8">
+    <link href="../../../css/bracket.css" rel="stylesheet" type="text/css"/>
+    <title>掘进功效排名</title>
+
+</head>
+
+<body style="background: #FFFFFF;overflow: hidden;">
+<div id="dom" style="position: relative;height: 450px;background-color: white;">
+    <div id="container" style="width: calc(100vw - 30px);height: 100%;float: left;">
+    </div>
+    <div>
+        <button id="stepInto" class="btn btn-outline-info" onclick="enterDetail()" style="position: absolute;width: 20px;height:100px;padding: 0px 0px;font-size: 12px;">点<br>击<br>进<br>入<br>详<br>情</button>
+    </div>
+</div>
+
+<div style="background: #FFFFFF;overflow: hidden;">
+    <hr style="margin:0 10px 0 10px;background-color: #E5E5E5;height: 1px;border: none">
+    <div id="button" class="btn btn-outline-mmm" style="margin-top:5px;float: center;width: 100%;border: hidden;font-size: 15px;color: #484848;">显示全部</div>
+</div>
+</body>
+
+<script src="../../../lib/highcharts.js"></script>
+<script src="../../../lib/jquery-2.1.4.min.js"></script>
+<script src="../../../lib/underscore.js"></script>
+<script>
+    var _selectproject = null;
+
+    function callJS(result){
+        var data = [];
+        var chart;
+        var high = false;
+        var dataTop = [];
+        var dataLast = [];
+        var hidedata = [];
+
+        if (result.data.data.length <= 10) {
+            data = result.data.data;
+        } else {
+            dataTop = result.data.data.slice(0, 5);
+            dataLast = result.data.data.slice(-6, -1);
+            hidedata = [
+                ['......', null, null, null]
+            ];
+            data = initData(dataTop,
+                hidedata, dataLast);
+        }
+        data = formateData(data);
+        initChart();
+
+        $('#button').click(function () {
+            if (hidedata.length == 1) {
+                document.getElementById("button").innerHTML = "收起列表";
+                if (result.data.data.length > 10) {
+                    hidedata = result.data.data.slice(dataTop.length,
+                        (result.data.data.length - dataLast.length - 1));
+                    data = initData(dataTop, hidedata, dataLast);
+                    data = formateData(data);
+                    changeDomHeight();
+                    initChart();
+                } else {
+                    $("#stepInto").css("top", 0 + "px");
+                    initChart();
+                }
+            } else {
+                document.getElementById("button").innerHTML = "显示全部";
+                if (result.data.data.length > 10) {
+                    hidedata = [
+                        ['......', null, null,
+                            null
+                        ]
+                    ];
+                    data = initData(dataTop, hidedata, dataLast);
+                    data = formateData(data);
+                    changeDomHeight();
+                    initChart();
+                } else {
+                    $("#stepInto").css("top", 0 + "px");
+                    initChart();
+                }
+
+            }
+        });
+
+        function initData(data1, data2, data3) {
+            var _temp = [];
+            for (var i in data1) {
+                _temp.push(data1[i]);
+            }
+            for (var j in data2) {
+                _temp.push(data2[j]);
+            }
+            for (var k in data3) {
+                _temp.push(data3[k]);
+            }
+            return _temp;
+        }
+
+        function formateData(unformatedData) {
+            var _temp = [];
+            for (var i in unformatedData) {
+                var _temp1 = [];
+                // if (unformatedData[i][1] == null) {
+                //     var name = unformatedData[i][0];
+                //     _temp1.push(name);
+                // } else {
+                //     var name = unformatedData[i][1];
+                //     _temp1.push(name);
+                // }
+                if (unformatedData[i][1] == null) {
+                    var total = unformatedData[i][1];
+                    var today = unformatedData[i][2];
+                    var yesterday = unformatedData[i][3];
+                    var name = unformatedData[i][0];
+                    _temp1.push(name);
+                    _temp1.push(total);
+                    _temp1.push(today);
+                    _temp1.push(yesterday);
+                } else {
+                    var total = new Number(unformatedData[i][2]);
+                    var today = new Number(unformatedData[i][3]);
+                    var yesterday = new Number(unformatedData[i][4]);
+                    var name = unformatedData[i][1];
+                    _temp1.push(name);
+                    _temp1.push(total.valueOf());
+                    _temp1.push(today.valueOf());
+                    _temp1.push(yesterday.valueOf());
+                }
+                _temp.push(_temp1);
+            }
+            return _temp;
+        }
+
+        function changeDomHeight() {
+            $('#dom').height(high ? 450 : 35 * result.data.data.length);
+            $("#stepInto").css("top", 0 + "px");
+            chart.reflow();
+            high = !high;
+        }
+
+        function initChart() {
+            chart = Highcharts.chart('container', {
+                chart: {
+                    type: 'bar',
+                    marginLeft: 75,
+                    marginRight: 30
+                },
+                title: {
+                    text: ''
+                },
+                plotOptions: {
+                    series: {
+                        pointWidth: 25,
+                        dataLabels: {
+                            align: 'right',
+                            color: 'white',
+                            style: {
+                                textOutline: "0.5px 0.5px #5a7bef"
+                            },
+                            enabled: true
+                        },
+                        events: {
+                            click: function (event) {
+                                $(event.target).attr("fill", "#15d2b8");
+                            }
+                        }
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    tickWidth: 0.5,
+                    tickLength: 3,
+                    labels: {
+                        rotation: -45, // 设置轴标签旋转角度
+                        tickWidth: 0,
+                        step: 1,
+                        formatter: function () {
+
+                            if (this.value != null) {
+                                val = this.value.substr(0, 6);
+                            }
+
+                            return val;
+
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    allowDecimals: false,
+                    title: {
+                        text: '环数',
+                        align: 'high'
+                    },
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+                    formatter: function (e) {
+                        var _name = this.point.name;
+                        var _index = 0;
+                        var selpoint = _.find(data, function (item, index) {
+                            _index = index;
+                            return item[0] === _name;
+                        });
+                        var sel = _.find(result.data.data, function (item, i) {
+                            _i = i;
+                            return item[1] === _name;
+                        });
+                        _selectproject = sel[0];
+                        $("#stepInto").css("top", _index * 34 + "px");
+                        return selpoint[0] + '<br/>' + '总环数:<b>' +
+                            this.y + '</b><br />白班: <b>' + selpoint[2] + '</b> 夜班: <b> ' +
+                            selpoint[3] + '</b>';
+                    }
+                },
+                series: [{
+                    name: '线路',
+                    data: data,
+                    color: '#5a7bef'
+                }]
+            });
+        }
+    }
+    function enterDetail() {
+        android.testback(_selectproject);
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+{
+    "code": 1,
+    "data": {
+        "currentRisks": [
+            {
+                "riskId": "001",
+                "current_risk_detail": "(95-429)(Ⅲ级)区域中",
+                "current_risk_cross": "施工阶段盾构隧道上浮",
+                "current_circle_num": "160",
+                "current_expect_date": "2019-03-10"
+            },
+            {
+                "riskId": "004",
+                "current_risk_detail": "(95-429)(Ⅲ级)区域中",
+                "current_risk_cross": "施工阶段盾构隧道上浮(硬岩)",
+                "current_circle_num": "160",
+                "current_expect_date": "2019-03-10"
+            }
+        ],
+        "reachRisks": [
+            {
+                "riskId": "003",
+                "reach_risk_detail": "(95-429)(Ⅲ级)",
+                "reach_risk_cross": "施工阶段盾构隧道上浮",
+                "reach_circle_num": "160",
+                "reach_expect_date": "2019-03-10"
+            },
+            {
+                "riskId": "005",
+                "reach_risk_detail": "(95-429)(Ⅲ级)",
+                "reach_risk_cross": "盾构隧道联络通道",
+                "reach_circle_num": "160",
+                "reach_expect_date": "2019-04-10"
+            }
+        ]
+    },
+    "errorDescription": null
+}

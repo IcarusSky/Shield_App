@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:src="@mipmap/img_live_white" />
+
+    <TextView
+        android:id="@+id/cameras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
+        android:drawablePadding="5dp"
+        android:text="您共关注8条视频线路"
+        android:textColor="@color/radio"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/camera_arrow"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/arrow_camera_up" />
+</LinearLayout>

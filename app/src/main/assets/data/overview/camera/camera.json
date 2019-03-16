@@ -1,0 +1,126 @@
+{
+  "data": [
+    {
+      "area": "华东片区",
+      "areacode":"001",
+      "city":"南京市，苏州市，无锡市，杭州市，宁波市，福州市，上海市，厦门市，合肥市",
+      "project": [
+        {
+          "projectname": "青岛地铁一号线土建一标8工区工程",
+          "projectcode": "001001",
+          "line": [
+            {
+              "linename": "青阳路站-沟岔村站区间（右线）",
+              "linecode": "001001001"
+            },
+            {
+              "linename": "南京地铁河西九号D7-TA01标",
+              "linecode": "001001002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "华南片区",
+      "areacode":"002",
+      "city":"广州市，南宁市，深圳市，长沙市",
+      "project": [
+        {
+          "projectname": "青岛地铁一号线土建一标8工区工程",
+          "projectcode": "001001",
+          "line": [
+            {
+              "linename": "青阳路站-沟岔村站区间（右线）",
+              "linecode": "001001001"
+            },
+            {
+              "linename": "南京地铁河西九号D7-TA01标",
+              "linecode": "001001002"
+            }
+          ]
+        }
+      ]
+    },{
+      "area": "西南片区",
+      "areacode":"003",
+      "city":"成都市，重庆市，武汉市，南昌市",
+      "project": [
+        {
+          "projectname": "青岛地铁一号线土建一标8工区工程",
+          "projectcode": "001001",
+          "line": [
+            {
+              "linename": "青阳路站-沟岔村站区间（右线）",
+              "linecode": "001001001"
+            },
+            {
+              "linename": "南京地铁河西九号D7-TA01标",
+              "linecode": "001001002"
+            }
+          ]
+        }
+      ]
+    },{
+      "area": "西北片区",
+      "areacode":"004",
+      "city":"西安市，兰州市",
+      "project": [
+        {
+          "projectname": "青岛地铁一号线土建一标8工区工程",
+          "projectcode": "001001",
+          "line": [
+            {
+              "linename": "青阳路站-沟岔村站区间（右线）",
+              "linecode": "001001001"
+            },
+            {
+              "linename": "南京地铁河西九号D7-TA01标",
+              "linecode": "001001002"
+            }
+          ]
+        }
+      ]
+    },{
+      "area": "华北片区",
+      "areacode":"005",
+      "city":"天津市，北京市，内蒙古自治区，河北省，山西省",
+      "project": [
+        {
+          "projectname": "青岛地铁一号线土建一标8工区工程",
+          "projectcode": "001001",
+          "line": [
+            {
+              "linename": "青阳路站-沟岔村站区间（右线）",
+              "linecode": "001001001"
+            },
+            {
+              "linename": "南京地铁河西九号D7-TA01标",
+              "linecode": "001001002"
+            }
+          ]
+        }
+      ]
+    },{
+      "area": "东北片区",
+      "areacode":"006",
+      "city":"长春市",
+      "project": [
+        {
+          "projectname": "青岛地铁一号线土建一标8工区工程",
+          "projectcode": "001001",
+          "line": [
+            {
+              "linename": "青阳路站-沟岔村站区间（右线）",
+              "linecode": "001001001"
+            },
+            {
+              "linename": "南京地铁河西九号D7-TA01标",
+              "linecode": "001001002"
+            }
+          ]
+        }
+      ]
+    }],
+  "success": "true"
+}

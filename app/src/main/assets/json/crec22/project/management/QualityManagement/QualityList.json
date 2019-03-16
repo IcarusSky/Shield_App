@@ -1,0 +1,12 @@
+{
+    "code": 1,
+    "data": {
+        "circleNum（环号）": 112,
+        "status（状态）": -1,
+        "semiBiasn（管片平偏）": 20,
+        "highBiasn（管片高偏）": 25,
+        "segment（相邻管片错台）": 2,
+        "ring（相邻环片错台）": 30
+    },
+    "errorDescription": null
+}

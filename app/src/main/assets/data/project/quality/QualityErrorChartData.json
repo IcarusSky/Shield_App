@@ -1,0 +1,28 @@
+[
+  {
+  "circleNum":"1",
+  "status":0,
+  "progress":"59.0m",
+  "semi_bias":"1.0m",
+  "high_bias":"-200.0mm",
+  "adjacent_segment_dislocation":"1.0mm",
+  "adjacent_ring_dislocation":"3.0mm"
+}
+,{
+  "circleNum":"1",
+  "status":0,
+  "progress":"59.0m",
+  "semi_bias":"1.0m",
+  "high_bias":"-200.0mm",
+  "adjacent_segment_dislocation":"1.0mm",
+  "adjacent_ring_dislocation":"3.0mm"
+},{
+  "circleNum":"1",
+  "status":0,
+  "progress":"59.0m",
+  "semi_bias":"100.0m",
+  "high_bias":"-20.0mm",
+  "adjacent_segment_dislocation":"1.0mm",
+  "adjacent_ring_dislocation":"3.0mm"
+}
+]

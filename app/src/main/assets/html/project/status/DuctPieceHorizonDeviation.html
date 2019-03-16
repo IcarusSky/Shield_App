@@ -1,0 +1,266 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="UTF-8">
+    <title>管片水平偏差</title>
+
+</head>
+
+<body>
+    <span id='datanull' style="font-size:14px;color:gray;text-align:center;display:block;"></span>
+    <div id="container" style="width: 100%;height: 200px;">
+    </div>
+</body>
+
+<script src="../../../lib/echarts.js"></script>
+<script src="../../../lib/jquery-2.1.4.min.js"></script>
+
+<script>
+    function callJS(result) {
+
+        var mainContainer = document.getElementById('container');
+        //用于使chart自适应高度和宽度,通过窗体高宽计算容器高宽
+        var resizeMainContainer = function () {
+            mainContainer.style.width = window.innerWidth*0.95+'px';
+        };
+        //设置div容器高宽
+        resizeMainContainer();
+        // 初始化图表
+        var mainChart = echarts.init(mainContainer);
+        $(window).on('resize',function(){//
+            //屏幕大小自适应，重置容器高宽
+            resizeMainContainer();
+            mainChart.resize();
+        });
+
+
+        var data = result.data;
+        var xAxis = [];
+        var deviationFront = [];
+        var deviationBack = [];
+        var standard = [];
+
+        var length = 0;
+        for (var i in data) {
+            length++;
+        }
+
+        if (length != 0) {
+            if (data.ringNo.length == 0 || data.ringNo[0] == null || data.horizontalFront[0] == null || data.horizontalBack[
+                    0] == null ||
+                data
+                .standard == null) {
+                document.getElementById("datanull").innerHTML = "暂无数据";
+            } else {
+                document.getElementById("datanull").innerHTML = "";
+                initChart();
+            }
+        } else {
+            document.getElementById("datanull").innerHTML = "暂无数据";
+        }
+
+        function initChart() {
+            for (var l in data.ringNo) {
+                xAxis.push(data.ringNo[l] + "环");
+            }
+            for (var i in data.horizontalFront) {
+                // var item = util(Sub(data.horizontalFront[i], data.standard, 1));
+                deviationFront.push(util(data.horizontalFront[i]));
+                standard.push(data.standard);
+            }
+            for (var j in data.horizontalBack) {
+                // var item = util(Sub(data.horizontalBack[j], data.standard, 1));
+                deviationBack.push(util(data.horizontalBack[j]));
+            }
+
+            function Sub(arg1, arg2) {
+                return Add(arg1, -Number(arg2), arguments[2]);
+            }
+
+            function Add(arg1, arg2) {
+                arg1 = arg1.toString(), arg2 = arg2.toString();
+                var arg1Arr = arg1.split("."),
+                    arg2Arr = arg2.split("."),
+                    d1 = arg1Arr.length == 2 ? arg1Arr[1] : "",
+                    d2 =
+                    arg2Arr.length == 2 ? arg2Arr[1] : "";
+                var maxLen = Math.max(d1.length, d2.length);
+                var m = Math.pow(10, maxLen);
+                var result = Number(((arg1 * m + arg2 * m) / m).toFixed(maxLen));
+                var d = arguments[2];
+                return typeof d === "number" ? Number((result).toFixed(d)) : result;
+            }
+
+            function util(value) {
+                var temp;
+                if (value >= 0) {
+                    temp = '+' + value;
+                } else if (value < 0) {
+                    temp = value;
+                } else {
+                    temp = '';
+                }
+                return temp;
+            }
+            var myChart = echarts.init(document.getElementById('container'));
+            var option = {
+                backgroundColor: '#ffffff',
+                color: ['#5a7bef', '#15d2b8', '#FF0000'],
+                grid: {
+                    left: '4%',
+                    right: '2%',
+                    bottom: '25px',
+                    top: '30px',
+                    containLabel: true
+                },
+                legend: {
+                    x: 'center',
+                    top: '88%',
+                    itemGap: 20,
+                    itemHeight: 15,
+                    itemWidth: 15,
+                    data: [{
+                        name: '前点',
+                        // 强制设置图形为圆。
+                        icon: 'circle',
+                        color: '#5a7bef',
+                        textStyle: {
+                            fontSize: 15
+                        }
+                    }, {
+                        name: '后点',
+                        // 强制设置图形为圆。
+                        icon: 'circle',
+                        color: '#15d2b8',
+                        textStyle: {
+                            fontSize: 15
+                        }
+                    }]
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(255,255,255,0.7)',
+                    borderColor: '#c6c5c5',
+                    borderWidth: 1,
+                    textStyle: {
+                        color: '#000',
+                        fontSize: 12,
+                        lineHeight: 20,
+                    },
+                    axisPointer: {
+                        lineStyle: {
+                            color: '#57617B'
+                        }
+                    }
+                },
+                xAxis: {
+                    splitLine: {
+                        show: true
+                    },
+                    type: 'category',
+                    data: xAxis,
+                    axisLine: {
+                        lineStyle: {
+                            color: '#ccc',
+                            width: 1
+                        }
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#000',
+                            fontSize: 8
+                        }
+                    }
+                },
+                yAxis: {
+                    axisLine: {
+                        lineStyle: {
+                            color: '#ccc',
+                            width: 1
+                        }
+                    },
+                    splitLine: {
+                        show: true
+                    },
+                    name: '偏差数:mm',
+                    nameTextStyle: {
+                        fontSize: 10,
+                        color: '#000'
+                    },
+                    type: 'value',
+                    scale: true,
+                    splitNumber: 10,
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#000',
+                            fontSize: 8
+                        }
+                    }
+                },
+                series: [{
+                    name: '前点',
+                    data: deviationFront,
+                    type: 'line',
+                    smooth: true,
+                    markPoint: {
+                        symbol: 'pin',
+                        symbolSize: 5
+                    },
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                width: 2.5
+                            }
+                        }
+
+                    }
+                }, {
+                    name: '后点',
+                    data: deviationBack,
+                    type: 'line',
+                    smooth: true,
+                    markPoint: {
+                        symbol: 'pin',
+                        symbolSize: 5
+                    },
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                width: 2.5
+                            }
+                        }
+
+                    }
+                }, {
+                    name: '基准线',
+                    data: standard,
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'none',
+                    label: {
+                        show: true,
+                        formatter: '{a}'
+                    },
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                width: 2.5
+                            }
+                        }
+
+                    }
+                }]
+            };
+            myChart.setOption(option);
+        }
+    }
+    function reload(){
+        window.location.reload();
+    }
+</script>
+</html>

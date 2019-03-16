@@ -1,0 +1,23 @@
+{
+    "code": 1,
+    "data": {
+        "totalCylinder": 9188,
+        "finishCylinder": 6678,
+        "finishRatio": 73,
+        "yesterdayFinish": 51,
+        "todayFinish": 12,
+        "sevenFinish": 186,
+        "oneLevel": 13,
+        "twoLevel": 33,
+        "threeLevel": 33,
+        "fourLevel": 71,
+        "normalTunne": 49,
+        "normalStop": 15,
+        "faultStop": 3,
+        "underRepair": 3,
+        "qualitAmple": 35,
+        "qualitMedium": 13,
+        "qualitBad": 3
+    },
+    "errorDescription": null
+}

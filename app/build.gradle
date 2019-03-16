@@ -1,0 +1,142 @@
+apply plugin: 'com.android.application'
+def dbflow_version = "4.2.1"
+android {
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+    signingConfigs {
+        release {
+            storeFile file('D:\\zt.jks') //绝对路径
+            storePassword "zhongtie123"
+            keyAlias "zhongtie"
+            keyPassword "zhongtie123"
+        }
+    }
+    defaultConfig {
+        applicationId "com.crec.shield"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "2.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        manifestPlaceholders = [
+                GETUI_APP_ID : "HcqYLRX8cuA849atPIBKf6",
+                GETUI_APP_KEY : "cuL5OzSRgeAvQwgkcqHBk8",
+                GETUI_APP_SECRET : "rTwdDiGpqB7OmVMaZEvpt5"
+        ]
+        ndk{
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.1.0'
+            }
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.github.dongjunkun:DropDownMenu:1.0.3'
+    implementation 'com.lqr.dropdownLayout:library:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.code.gson:gson:2.7'
+
+    implementation"com.google.dagger:dagger:2.14.1"
+    annotationProcessor"com.google.dagger:dagger-compiler:2.14.1"
+
+    implementation 'com.uber.autodispose:autodispose:0.7.0'
+    implementation 'com.uber.autodispose:autodispose-android:0.7.0'
+    implementation 'com.uber.autodispose:autodispose-android-archcomponents:0.7.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.github.arcadefire:nice-spinner:1.3.1'
+    implementation 'com.jzxiang.pickerview:TimePickerDialog:1.0.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'  //latest.release指代最新版本号
+    implementation 'com.jaeger.statusbaruitl:library:1.3.1'
+    implementation 'com.linsea:universalvideoview:1.1.0@aar'  // 视频播放
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.orhanobut:logger:2.1.1'
+    implementation 'com.lzy.net:okgo:2.1.4'
+    implementation 'com.lzy.net:okrx:0.1.2'
+    implementation 'com.lzy.net:okserver:1.1.3'
+    implementation 'top.zibin:Luban:1.1.2'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    implementation 'com.facebook.stetho:stetho:1.4.2'
+    implementation 'co.lujun:androidtagview:1.1.4'
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'org.litepal.android:core:1.5.1'
+    implementation 'org.apmem.tools:layouts:1.10@aar'
+    implementation 'commons-codec:commons-codec:1.9'
+    api files('libs/opinion.jar')
+    api files('libs/fastjson-1.1.45.android.jar')
+    api files('libs/pinyin4j-2.5.0.jar')
+    api files('libs/commons-lang-2.5.jar')
+    implementation files('libs/AudioEngineSDK.jar')
+    implementation files('libs/HCNetSDK.jar')
+    implementation files('libs/jna.jar')
+    implementation files('libs/PlayerSDK.jar')
+    implementation files('libs/GetuiSDK2.12.5.0.jar')
+    implementation 'fm.jiecao:jiecaovideoplayer:4.8.3'
+    implementation 'com.shizhefei:ViewPagerIndicator:1.1.7'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.sunfusheng:marqueeview:1.3.2'  // 首页走马灯消息
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'   //  搜索
+
+    implementation 'com.zhihu.android:matisse:0.5.1'
+    //annotationProcessor 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.library.tangxiaolv:telegramgallery:1.0.5'
+
+
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    // sql-cipher database encyrption (optional)
+    implementation "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
+
+    implementation "cc.solart:turbo-recyclerview-helper:1.0.3-beta"
+    implementation "com.squareup.retrofit2:converter-gson:2.0.0-beta4"
+}

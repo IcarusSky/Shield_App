@@ -1,0 +1,71 @@
+[
+  {"id": 1,
+  "project_area": "华南片区",
+  "project_name": "南京地铁5号线",
+  "status": "掘进中",
+  "today_rings": 13,
+  "parent_rings":193,
+  "total_rings":846,
+  "cameras": [{
+    "id": "1",
+    "line_area": "华南片区",
+    "line": "阳春路站--沟岔村站区间（左线）",
+    "today_rings": 6,
+    "parent_rings": 90,
+    "total_rings": 400
+  },{
+    "id": "2",
+    "line_area": "华南片区",
+    "line": "阳春路站--沟岔村站区间（右线）",
+    "today_rings": 7,
+    "parent_rings": 103,
+    "total_rings": 446
+  }]
+},{
+  "id": 2,
+  "project_area": "华南片区",
+  "project_name": "深圳地铁7号线",
+  "status": "掘进中",
+  "today_rings": 15,
+  "parent_rings":263,
+  "total_rings":546,
+  "cameras": [{
+    "id": "1",
+    "line_area": "华南片区",
+    "line": "茶光站--太安站区间（左线）",
+    "today_rings": 6,
+    "parent_rings": 130,
+    "total_rings": 234
+  },{
+    "id": "2",
+    "line_area": "华南片区",
+    "line": "茶光站--太安站区间（右线）",
+    "today_rings": 9,
+    "parent_rings": 133,
+    "total_rings": 312
+  }]
+},{
+  "id": 3,
+  "project_area": "华南片区",
+  "project_name": "苏州地铁2号线",
+  "status": "竣工",
+  "today_rings": 0,
+  "parent_rings":590,
+  "total_rings":590,
+  "cameras": [{
+    "id": "1",
+    "line_area": "华南片区",
+    "line": "桑田岛站--骑河站区间（左线）",
+    "today_rings": 0,
+    "parent_rings": 289,
+    "total_rings": 289
+  },{
+    "id": "2",
+    "line_area": "华南片区",
+    "line": "桑田岛站--骑河站区间（右线）",
+    "today_rings": 7,
+    "parent_rings": 301,
+    "total_rings": 301
+  }]
+}
+]

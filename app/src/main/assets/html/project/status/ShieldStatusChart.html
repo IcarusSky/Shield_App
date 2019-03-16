@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>盾构实时参数</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <style>
+.title {
+	margin: 20px 15px 10px;
+	color: #6d6d72;
+	font-size: medium;
+}
+
+.mui-input-row {
+	font-size: small;
+}
+
+.mui-input-clear {
+	font-size: small;
+}
+</style>
+</head>
+
+<body class="mui-android">
+<div class="mui-content">
+    <div id="Gallery" class="mui-slider" style="margin-top: 15px;">
+        <div class="mui-slider-group">
+
+            <div class="mui-slider-item">
+
+                <div id="fd" class="mui-card" style="height: 80%;">
+
+                    <div style="font-size: 10px; padding: 10px; padding-bottom: 20px;">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <canvas id="canvas_dx"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../../../js/project/status/zepto.min.js"></script>
+<script src="../../../js/project/status/selector.js"></script>
+<script src="../../../js/project/status/jquery.chained.js"></script>
+<script src="../../../js/project/status/mui.min.js"></script>
+<script src="../../../js/project/status/draw.js"></script>
+
+<script type="text/javascript" id="draw">
+		mui.init()
+	</script>
+<script>
+//新建推进系统，导向系统画布
+    var daoxiangSystem = new DaoXiangSystem('canvas_dx');
+    function initData(data) {
+
+//俯仰角和滚动角数值
+            var fyValue, gdValue;
+            //土压
+            var value1, value2, value3, value4, value5;
+
+            //纸飞机坐标
+            var hx, hy, fx, fy;
+            for (var i in data.data) {
+               for(var j in data.data[i].statusData){
+                  var id = data.data[i].statusData[j].point_id;
+                //A组推进油缸压力
+                if ("Tag_72" == id) {
+                    $("#AZuTuiJinYaLi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //B组推进油缸压力
+                else if ("Tag_73" == id) {
+                    $("#BZuTuiJinYaLi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //C组推进油缸压力
+                else if ("Tag_74" == id) {
+                    $("#CZuTuiJinYaLi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //D组推进油缸压力
+                else if ("Tag_75" == id) {
+                    $("#DZuTuiJinYaLi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //A组推进位移 油缸行程
+                else if ("Tag_76" == id) {
+                    $("#AZuTuiJinWeiYi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //B组推进位移
+                else if ("Tag_77" == id) {
+                    $("#BZuTuiJinWeiYi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //C组推进位移
+                else if ("Tag_78" == id) {
+                    $("#CZuTuiJinWeiYi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //D组推进位移
+                else if ("Tag_79" == id) {
+                    $("#DZuTuiJinWeiYi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //推进速度
+                else if ("Tag_66" == id) {
+                    $("#TY_TJXT_0002")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //推进压力
+                else if ("Tag_65" == id) {
+                    $("#tuiJinYaLi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //总推进力
+                else if ("Tag_67" == id) {
+                    $("#zongTuiJinLi")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+                //导向里程
+                else if ("Tag_13" == id) {
+                    $("#jueJinLiCheng")
+                        .text(
+                            Math
+                            .round(data.data[i].statusData[j].tagvalue * 100) / 100);
+                }
+
+                //导向俯仰角
+                else if ("Tag_14" == id) {
+                    fyValue = data.data[i].statusData[j].tagvalue;
+                }
+                //滚动角
+                else if ("Tag_15" == id) {
+                    gdValue = data.data[i].statusData[j].tagvalue;
+                }
+                //导向水平前点
+                else if ("Tag_18" == id) {
+                    hx = data.data[i].statusData[j].tagvalue;
+                }
+                //导向垂直前点
+                else if ("Tag_16" == id) {
+                    hy = data.data[i].statusData[j].tagvalue;
+                }
+                //导向水平后点
+                else if ("Tag_19" == id) {
+                    fx = data.data[i].statusData[j].tagvalue;
+                }
+                //导向垂直后点
+                else if ("Tag_17" == id) {
+                    fy = data.data[i].statusData[j].tagvalue;
+                }
+                //一号土仓压力 none
+                else if ("Tag_60" == id) {
+                    value1 = data.data[i].statusData[j].tagvalue;
+                }
+                //二号土仓压力 none
+                else if ("Tag_61" == id) {
+                    value2 = data.data[i].statusData[j].tagvalue;
+                }
+                //三号土仓压力 none
+                else if ("Tag_62" == id) {
+                    value3 = data.data[i].statusData[j].tagvalue;
+                }
+                //四号土仓压力 none
+                else if ("Tag_63" == id) {
+                    value4 = data.data[i].statusData[j].tagvalue;
+                }
+                //五号土仓压力 none
+                else if ("Tag_64" == id) {
+                    value5 = data.data[i].statusData[j].tagvalue;
+                }
+                //刀盘转速
+                else if ("Tag_68" == id) {
+                    $("#daoPanZhuanSu").text(
+                        data.data[i].statusData[j].tagvalue);
+                }
+                //贯入度
+                else if ("Tag_71" == id) {
+                    $("#guanRuDu").text(
+                        data.data[i].statusData[j].tagvalue);
+                }
+                //盾构机状态
+                else if ("Tag_92" == id) {
+                    if (data.data[i].statusData[j].tagvalue == true) {
+                        $("#tbmZhuangTai").text("掘进开始");
+                    }
+                } else if ("Tag_93" == id) {
+                    if (data.data[i].statusData[j].tagvalue == true) {
+                        $("#tbmZhuangTai").text("管片拼装");
+                    }
+                } else if ("Tag_94" == id) {
+                    if (data.data[i].statusData[j].tagvalue == true) {
+                        //none
+                        $("#tbmZhuangTai").text("停机模式");
+                    }
+                }
+                //刀盘扭矩
+                else if ("Tag_69" == id) {
+                    $("#daoPanNiuJu").text(
+                        data.data[i].statusData[j].tagvalue);
+                }
+                //水平趋向 none
+                else if ("Tag_21" == id) {
+                    $("#shuiPingQuXiang").text(
+                        data.data[i].statusData[j].tagvalue);
+                }
+                //垂直趋向 none
+                else if ("Tag_20" == id) {
+                    $("#chuiZhiQuXiang").text(
+                        data.data[i].statusData[j].tagvalue);
+                }
+
+
+
+               }
+
+
+            }
+
+            /**画布设置*/
+            //清空画布
+            daoxiangSystem.clearCanvas();
+            //导向系统画圆
+            daoxiangSystem.drawCircle();
+            //导向系统画XY轴
+            daoxiangSystem.drawXYZhou();
+            //导向系统画红色虚线矩形
+            //daoxiangSystem.drawRect();
+            daoxiangSystem.drawAlarmCircle();
+            //导向系统画俯仰角和滚动角
+            daoxiangSystem.drawFYJandGDJ();
+
+            //导向系统画刻度数值
+            daoxiangSystem.drawFYJandGDJValue(fyValue,
+                gdValue)
+            //推进系统画中间土压数值
+
+
+            //设置水平盾尾和切口
+            $("#shuiPingHouDian").text(
+                Math.round(fx * 100) / 100);
+            $("#shuiPingQianDian").text(
+                Math.round(hx * 100) / 100);
+            //设置垂直盾尾和切口
+            $("#chuiZhiHouDian").text(
+                Math.round(fy * 100) / 100);
+            $("#chuiZhiQianDian").text(
+                Math.round(hy * 100) / 100);
+            //替换成纸飞机显示
+            // daoxiangSystem.drawQK(hx, hy);
+            // daoxiangSystem.drawDw(fx, fy);
+            // daoxiangSystem.drawFx(hx, hy, fx, fy);
+            daoxiangSystem.drawAirPlane(hx, hy, fx, fy);
+    }
+</script>
+</body>
+
+</html>

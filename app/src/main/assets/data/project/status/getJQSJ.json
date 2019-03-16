@@ -1,0 +1,65 @@
+{
+	"msg": "",
+	"obj": [{
+		"bz": "",
+		"dwid": "TY_TJXT_0004",
+		"dwname": "刀盘转速",
+		"id": "CREC312A_刀盘转速",
+		"ms": "",
+		"tagname": "CREC312A_刀盘转速",
+		"tagtime": "2018-07-27 08:42:54",
+		"tagtype": "10",
+		"tagvalue": "0.0043402775",
+		"tbmcode": "CREC312A",
+		"tbmid": "a39fcff3d5d0497bb4d4df261befcc14"
+	}, {
+		"bz": "",
+		"dwid": "TY_YLJC_0006",
+		"dwname": "盾构水平倾斜",
+		"id": "CREC312A_齿轮油压力",
+		"ms": "",
+		"tagname": "CREC312A_齿轮油压力",
+		"tagtime": "2018-07-27 08:42:54",
+		"tagtype": "10",
+		"tagvalue": "0",
+		"tbmcode": "CREC312A",
+		"tbmid": "a39fcff3d5d0497bb4d4df261befcc14"
+	}, {
+		"bz": "",
+		"dwid": "TY_TJXT_0010",
+		"dwname": "盾构垂直倾斜",
+		"id": "CREC312A_C组推进油缸压力",
+		"ms": "",
+		"tagname": "CREC312A_C组推进油缸压力",
+		"tagtime": "2018-07-27 08:42:54",
+		"tagtype": "10",
+		"tagvalue": "139.33739",
+		"tbmcode": "CREC312A",
+		"tbmid": "a39fcff3d5d0497bb4d4df261befcc14"
+	}, {
+		"bz": "",
+		"dwid": "TY_JJXT_0001",
+		"dwname": "左中土压",
+		"id": "CREC312A_A组铰接油缸行程",
+		"ms": "",
+		"tagname": "CREC312A_A组铰接油缸行程",
+		"tagtime": "2018-07-27 08:42:54",
+		"tagtype": "10",
+		"tagvalue": "36.429398",
+		"tbmcode": "CREC312A",
+		"tbmid": "a39fcff3d5d0497bb4d4df261befcc14"
+	}, {
+		"bz": "",
+		"dwid": "TY_TJXT_0001",
+		"dwname": "右中土压",
+		"id": "CREC312A_推进压力",
+		"ms": "",
+		"tagname": "CREC312A_推进压力",
+		"tagtime": "2018-07-27 08:42:54",
+		"tagtype": "10",
+		"tagvalue": "20.645254",
+		"tbmcode": "CREC312A",
+		"tbmid": "a39fcff3d5d0497bb4d4df261befcc14"
+	}],
+	"success": true
+}

@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "status": "在建",
+      "area": [
+        {
+          "areaname": "华南片区",
+          "areacode": "001",
+          "project": [
+            {
+              "projectname": "南京地铁5号线",
+              "projectcode": "001005"
+            },
+            {
+              "projectname": "南京地铁6号线",
+              "projectcode": "001006"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "status": "竣工",
+      "area": [
+        {
+          "areaname": "华东片区",
+          "areacode": "001",
+          "project": [
+            {
+              "projectname": "南京地铁1号线",
+              "projectcode": "001001"
+            },
+            {
+              "projectname": "南京地铁2号线",
+              "projectcode": "001002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "status": "未开始",
+      "area": [
+        {
+          "areaname": "西南片区",
+          "areacode": "001",
+          "project": [
+            {
+              "projectname": "南京地铁7号线",
+              "projectcode": "001007"
+            },
+            {
+              "projectname": "南京地铁8号线",
+              "projectcode": "001008"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "success": "true"
+}

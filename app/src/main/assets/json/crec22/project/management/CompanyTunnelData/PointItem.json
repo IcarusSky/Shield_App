@@ -1,0 +1,36 @@
+{
+  "code": 1,
+  "data": [
+    {
+      "name": "推力",
+      "value": "31083.32",
+      "unit": "KN",
+      "status": "不正常"
+    },
+    {
+      "name": "扭矩",
+      "value": "5.38",
+      "unit": "KN·m",
+      "status": "正常"
+    },
+    {
+      "name": "速度",
+      "value": "0",
+      "unit": "mm/min",
+      "status": "正常"
+    },
+    {
+      "name": "刀盘转速",
+      "value": "0",
+      "unit": "r/min ",
+      "status": "正常"
+    },
+    {
+      "name": "螺旋转速",
+      "value": "0",
+      "unit": "r/min ",
+      "status": "正常"
+    }
+  ],
+  "errorDescription": null
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/radio">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/ic_arrow_back"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tv_feedback"
+            android:textColor="@color/color_white"
+            android:textSize="21sp"
+            />
+
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/buttonstyle"
+            android:text="@string/tv_commit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+
+            />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/note_titile_bg"
+        android:hint="@string/tv_title"
+        android:padding="5dp"
+        android:textColor="@color/color_Black"
+        android:textColorHint="#84878c"
+        android:maxLength="16"
+        />
+
+    <EditText
+        android:id="@+id/et_tel"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="10dp"
+        android:inputType="phone"
+        android:background="@mipmap/note_titile_bg"
+        android:hint="@string/tv_tel"
+        android:padding="5dp"
+        android:textColor="@color/color_Black"
+        android:textColorHint="#84878c"
+        android:maxLength="20"
+        />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="3dp"
+        android:background="@mipmap/note_content_bg"
+        android:gravity="start"
+        android:hint="@string/tv_content"
+        android:maxLines="20"
+        android:padding="5dp"
+        android:textColor="@color/color_Black"
+        android:textColorHint="#84878c"
+        android:maxLength="200"
+
+        />
+
+
+</LinearLayout>

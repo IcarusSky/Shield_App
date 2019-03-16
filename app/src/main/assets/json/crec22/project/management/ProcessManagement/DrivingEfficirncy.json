@@ -1,0 +1,182 @@
+{
+  "code": 1,
+  "data": {
+    "yesterdayRanking": [
+      {
+        "projectId": "04559683f8ab476ca3414234bb12abd6",
+        "projectName": "南宁市轨道交通4号线02标土建8工区工程",
+        "finishNumber": 2,
+        "dayNumber":0,
+        "nightNumber":2
+      },
+      {
+        "projectId": "0af34b1df7594f778eeafd36401d9606",
+        "projectName": "厦门轨道3号线2标五工区",
+        "finishNumber": 2,
+        "dayNumber":1,
+        "nightNumber":1
+      },
+      {
+        "projectId": "16040003",
+        "projectName": "福州1号线2期4标",
+        "finishNumber": 1,
+        "dayNumber":0,
+        "nightNumber":1
+      },
+      {
+        "projectId": "23a389428ebf4a7a8df77af105b65e64",
+        "projectName": "武汉市轨道交通5号线5标",
+        "finishNumber": 1,
+        "dayNumber":0,
+        "nightNumber":1
+      },
+      {
+        "projectId": "2f7670d15a0d4d1a92e53ded25919df8",
+        "projectName": "青岛地铁1号线土建一标8工区工程",
+        "finishNumber": 1,
+        "dayNumber":0,
+        "nightNumber":1
+      },
+      {
+        "projectId": "47663d7ad9ce4beb8244e5778d0c5e72",
+        "projectName": "南京地铁七号线二工区",
+        "finishNumber": 1,
+        "dayNumber":0,
+        "nightNumber":1
+      }
+    ],
+    "todayRanking": [
+      {
+        "projectId": "04559683f8ab476ca3414234bb12abd6",
+        "projectName": "南宁市轨道交通4号线02标土建8工区工程",
+        "finishNumber": 2,
+        "dayNumber":1,
+        "nightNumber":1
+      },
+      {
+        "projectId": "0af34b1df7594f778eeafd36401d9606",
+        "projectName": "厦门轨道3号线2标五工区",
+        "finishNumber": 2,
+        "dayNumber":1,
+        "nightNumber":1
+      },
+      {
+        "projectId": "16040003",
+        "projectName": "福州1号线2期4标",
+        "finishNumber": 2,
+        "dayNumber":1,
+        "nightNumber":1
+      },
+      {
+        "projectId": "23a389428ebf4a7a8df77af105b65e64",
+        "projectName": "武汉市轨道交通5号线5标",
+        "finishNumber": 1,
+        "dayNumber":0,
+        "nightNumber":1
+      },
+      {
+        "projectId": "2f7670d15a0d4d1a92e53ded25919df8",
+        "projectName": "青岛地铁1号线土建一标8工区工程",
+        "finishNumber": 1,
+        "dayNumber":0,
+        "nightNumber":1
+      },
+      {
+        "projectId": "47663d7ad9ce4beb8244e5778d0c5e72",
+        "projectName": "南京地铁七号线二工区",
+        "finishNumber": 0,
+        "dayNumber":0,
+        "nightNumber":0
+      }
+    ],
+    "sevenRanking": [
+      {
+        "projectId": "04559683f8ab476ca3414234bb12abd6",
+        "projectName": "南宁市轨道交通4号线02标土建8工区工程",
+        "finishNumber": 5,
+        "dayNumber":2,
+        "nightNumber":3
+      },
+      {
+        "projectId": "0af34b1df7594f778eeafd36401d9606",
+        "projectName": "厦门轨道3号线2标五工区",
+        "finishNumber": 5,
+        "dayNumber":3,
+        "nightNumber":2
+      },
+      {
+        "projectId": "16040003",
+        "projectName": "福州1号线2期4标",
+        "finishNumber": 3,
+        "dayNumber":2,
+        "nightNumber":1
+      },
+      {
+        "projectId": "23a389428ebf4a7a8df77af105b65e64",
+        "projectName": "武汉市轨道交通5号线5标",
+        "finishNumber": 2,
+        "dayNumber":1,
+        "nightNumber":1
+      },
+      {
+        "projectId": "2f7670d15a0d4d1a92e53ded25919df8",
+        "projectName": "青岛地铁1号线土建一标8工区工程",
+        "finishNumber": 2,
+        "dayNumber":1,
+        "nightNumber":1
+      },
+      {
+        "projectId": "47663d7ad9ce4beb8244e5778d0c5e72",
+        "projectName": "南京地铁七号线二工区",
+        "finishNumber": 0,
+        "dayNumber":0,
+        "nightNumber":0
+      }
+    ],
+    "thirtyRanking": [
+      {
+        "projectId": "0af34b1df7594f778eeafd36401d9606",
+        "projectName": "厦门轨道3号线2标五工区",
+        "finishNumber": 16,
+        "dayNumber":5,
+        "nightNumber":11
+      },
+      {
+        "projectId": "605be42df08741489076a995cabde92d",
+        "projectName": "广州市轨道交通十一号线11305标",
+        "finishNumber": 9,
+        "dayNumber":4,
+        "nightNumber":5
+      },
+      {
+        "projectId": "7d0873cf6d8d416f9e2bb8930cb3e1c4",
+        "projectName": "大连地铁5号线4标",
+        "finishNumber": 7,
+        "dayNumber":4,
+        "nightNumber":3
+      },
+      {
+        "projectId": "94c37e7afb2447e684aee2d56495b919",
+        "projectName": "上海轨道交通18号线工程土建工程5标",
+        "finishNumber": 5,
+        "dayNumber":3,
+        "nightNumber":2
+      },
+      {
+        "projectId": "9e65a556087141489c3de3dd50c2c170",
+        "projectName": "成都轨道交通8号线一期工程2标",
+        "finishNumber": 2,
+        "dayNumber":1,
+        "nightNumber":1
+      },
+      {
+        "projectId": "9ec2f434fa78491b8578be79150b177b",
+        "projectName": "青岛地铁8号线工程PPP项目（B2包）土建03工区",
+        "finishNumber": 1,
+        "dayNumber":0,
+        "nightNumber":1
+      }
+    ]
+  },
+  "errorDescription": null
+}

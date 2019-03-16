@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/radio"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/back_white"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="17dp"
+            android:text="设备管理"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="盾构机状态分布图"
+                        android:textColor="@color/text_com_color"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@color/gray3"
+                    android:layout_marginLeft="@dimen/sp10"
+                    android:layout_marginRight="@dimen/sp10"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/status_chart"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/whitesmoke"></com.github.mikephil.charting.charts.PieChart>
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="15dp"
+                            android:text="123"
+                            android:background="@color/whitesmoke"
+                            android:textSize="20sp"
+                            />
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tunnul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="50dp"
+                            android:drawableLeft="@drawable/circle_solid_login"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/pause"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/tunnul"
+                            android:drawableLeft="@drawable/circle_solid_cornflowerblue"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/captaintest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/pause"
+                            android:drawableLeft="@drawable/circle_solid_safe"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/unkennel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tunnul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="50dp"
+                            android:drawableLeft="@drawable/circle_solid_goldenrod"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/inrepair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tunnul"
+                            android:layout_alignTop="@+id/unkennel"
+                            android:layout_toRightOf="@+id/unkennel"
+                            android:layout_marginLeft="15dp"
+                            android:drawableLeft="@drawable/circle_solid_lightcoral"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tunnul"
+                            android:layout_alignTop="@+id/unkennel"
+                            android:layout_toRightOf="@+id/inrepair"
+                            android:layout_marginLeft="15dp"
+                            android:drawableLeft="@drawable/circle_solid_blueviolet"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/dismantle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/unkennel"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="50dp"
+                            android:drawableLeft="@drawable/circle_solid_orangered"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/transport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tunnul"
+                            android:layout_alignTop="@+id/dismantle"
+                            android:layout_toRightOf="@+id/dismantle"
+                            android:layout_marginLeft="15dp"
+                            android:drawableLeft="@drawable/circle_solid_tan"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_below="@+id/dismantle"/>
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="2"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginBottom="2dp"-->
+                                <!--android:paddingRight="7dp"-->
+                                <!--android:gravity="right"-->
+                                <!--android:text="盾构机当前环数:"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginBottom="2dp"-->
+                                <!--android:paddingRight="7dp"-->
+                                <!--android:gravity="right"-->
+                                <!--android:text="今日完成环数:"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginBottom="2dp"-->
+                                <!--android:paddingRight="7dp"-->
+                                <!--android:gravity="right"-->
+                                <!--android:text="昨日完成环数:"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:paddingRight="7dp"-->
+                                <!--android:gravity="right"-->
+                                <!--android:text="七日完成环数:"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="3"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/current_ring"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginBottom="2dp"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/today_rings"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginBottom="2dp"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/yesterday_rings"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginBottom="2dp"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/week_rings"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textColor="@color/text_com_color"-->
+                                <!--android:textSize="@dimen/sp13" />-->
+
+                        <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray1"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@mipmap/tool"
+                    />
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img1"
+                    android:layout_alignTop="@+id/img1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14sp"
+                    android:text="本周维修："
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/weekrepair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text1"
+                    android:layout_alignTop="@+id/img1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@+id/text1"
+                    android:layout_alignTop="@+id/weekrepair"
+                    android:layout_marginLeft="40dp"
+                    android:background="@color/white"
+                    android:src="@mipmap/tools"/>
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img2"
+                    android:layout_alignTop="@+id/img1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14sp"
+                    android:text="本周改造及再制造："
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/weekrebuild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text2"
+                    android:layout_alignTop="@+id/img1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray1"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray1"></View>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@mipmap/toolframe" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:paddingRight="7dp"
+                                android:gravity="right"
+                                android:text="上月故障时间:"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:paddingRight="7dp"
+                                android:gravity="right"
+                                android:text="本月故障时间:"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:paddingRight="7dp"
+                                android:gravity="right"
+                                android:text="上周故障停机:"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:paddingRight="7dp"
+                                android:gravity="right"
+                                android:text="本周故障停机:"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lastmonthfault"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+                            <TextView
+                                android:id="@+id/thismonthfault"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+                            <TextView
+                                android:id="@+id/lastweekfault"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+                            <TextView
+                                android:id="@+id/thisweekfault"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/text_com_color"
+                                android:textSize="@dimen/sp13" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray1"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray1"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="设备台账"
+                        android:textColor="@color/text_com_color"
+                        android:textSize="@dimen/sp17" />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tableNULL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="9dp"
+                        android:textColor="@color/color_Aluminum"
+                        android:visibility="gone" />
+
+                    <com.crec.shield.weidget.MyHorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:scrollbars="none">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerViewTable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.crec.shield.weidget.MyHorizontalScrollView>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

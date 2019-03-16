@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="area">
+        <item>片区</item>
+        <item>华南片区</item>
+        <item>华东片区</item>
+        <item>西南片区</item>
+    </string-array>
+
+    <string-array name="project">
+        <item>项目</item>
+        <item>南京地铁1号线</item>
+        <item>南京地铁2号线</item>
+        <item>南京地铁3号线</item>
+        <item>南京地铁4号线</item>
+        <item>南京地铁5号线</item>
+    </string-array>
+
+    <string-array name="line">
+        <item>线路</item>
+        <item>阳春路站--沟岔村站区间（左线）</item>
+        <item>阳春路站--沟岔村站区间（右线）</item>
+    </string-array>
+
+    <string-array name="lines">
+        <item>阳春路站--沟岔村站区间（左线）</item>
+        <item>阳春路站--沟岔村站区间（右线）</item>
+    </string-array>
+
+    <string-array name="xihan">
+        <item>户县收费站</item>
+        <item>三星收费站</item>
+        <item>涝峪(涝峪口)收费站</item>
+    </string-array>
+
+    <string-array name="hanning">
+        <item>龙亭收费站</item>
+        <item>洋县收费站</item>
+        <item>城固收费站</item>
+    </string-array>
+
+    <string-array name="xiwei">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="baiquan">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="risklevel">
+        <item>Ⅰ</item>
+        <item>Ⅱ</item>
+        <item>Ⅲ</item>
+        <item>Ⅳ</item>
+    </string-array>
+
+    <string-array name="query_suggestions">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>SCALA</item>
+        <item>Ruby</item>
+        <item>JavaScript</item>
+    </string-array>
+
+    <string-array name="waveSideBarLetters">
+        <item>\u0023</item>
+        <item>\u2606</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+</resources>

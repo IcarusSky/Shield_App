@@ -1,0 +1,38 @@
+{
+    "code": 1,
+    "data": {
+        "currentunusuals": [
+            {
+                "unusualId": "001",
+                "current_unusual_detail": "(95-429)(Ⅲ级)",
+                "current_unusual_cross": "盾尾密封失效",
+                "current_circle_num": "160",
+                "current_expect_date": "2019-03-10",
+            },
+            {
+                "unusualId": "004",
+                "current_unusual_detail": "(95-429)(Ⅲ级)",
+                "current_unusual_cross": "施工阶段盾构隧道上浮(硬岩)",
+                "current_circle_num": "160",
+                "current_expect_date": "2019-03-10",
+            }
+        ],
+        "reachunusuals": [
+            {
+				"unusualId": "003",
+                "reach_unusual_detail": "(95-429)(Ⅲ级)",
+                "reach_unusual_cross": "盾构法隧道穿越硬岩段",
+                "reach_circle_num": "160",
+                "reach_expect_date": "2019-03-10",
+            },
+            {
+                "unusualId": "005",
+                "reach_unusual_detail": "(95-429)(Ⅲ级)",
+                "reach_unusual_cross": "盾构隧道联络通道",
+                "reach_circle_num": "160",
+                "reach_expect_date": "2019-04-10",
+            }
+        ]
+    },
+    "errorDescription": null
+}

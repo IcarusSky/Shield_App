@@ -1,0 +1,31 @@
+{
+    "code": 1,
+    "data": {
+        "ringRatio" : {
+            "current": 868,
+            "total": 1780
+        },
+        "presentRings": 12,
+        "todayFinish" : 11,
+        "yesterdayFinish": 11,
+        "sevenFinish": 88,
+        "currentRisk": 3,
+        "nearRisk": 5,
+        "totalRisk": 16,
+        "currentUnusual": 17,
+        "nearUnusual": 33,
+        "totalUnusual": 56,
+        "statusScale": {
+            "driving": 78,
+            "trouble": 12,
+            "close": 10
+        },
+        "deviceName": "小松7号",
+        "todayStatus": 0,
+		"totalNumber": 868,
+        "normalNumber": 322,
+        "abnormalNumber": 32
+    },
+    "errorDescription": null
+
+}

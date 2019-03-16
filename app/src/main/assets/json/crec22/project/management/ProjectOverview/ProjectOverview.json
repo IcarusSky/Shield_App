@@ -1,0 +1,20 @@
+﻿{
+    "code": 1,
+    "data": {
+        "projectId": "12164sdasd54ad654as5d4sd",
+        "projectName": "西安地铁一号线 钟楼南门区间线路",
+        "lineId": "sd1a2335as4das4d5s64d",
+        "lineName": "钟楼南门区间线路左线，钟楼南门区间线路右线",
+        "planStartEnd": "2019-01-01至2019-06-18",
+        "sectionMileage": "左线999m,右线876.5m",
+        "condition": "淤泥质粉细砂层2-2",
+        "lineType": "",
+        "tube": {
+            "diameter": 18,
+            "inradium": 15
+        },
+        "tbmResource": "2台土压平衡式盾构机",
+        "manager": "博济"
+    },
+    "errorDescription": null
+}

@@ -1,0 +1,14 @@
+{
+	"shield_name":"海瑞克S485",
+	"shield_status":"掘进中",
+	"shield_data_status":"数据连接中",
+	"shield_data_time":"2018-08-03 18:20:45",
+	"driving_circle_num":159,
+	"horizontal_forward_point":-12,
+	"horizontal_back_point":-12,
+	"horizontal_trend":-0,
+	"guide_progress":15945,
+	"vertical_forward_point":-14,
+	"vertical_back_point":-1,
+	"vertical_trend":-1
+}

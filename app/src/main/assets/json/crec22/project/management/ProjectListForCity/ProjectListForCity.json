@@ -1,0 +1,498 @@
+{
+  "code": 1,
+  "data": [
+      {
+
+      "city": "关注项目",
+      "projectList": [
+        {
+          "lineId": "5db28567bfac4ffb8839462cf59e74e9",
+          "lineName": "成都轨道交通8号线一期工程2标-出入段线南线",
+          "followStatus": 1
+        },
+		{
+          "lineId": "46934101de5e4cde96cc39b04f9b9486",
+          "lineName": "成都轨道交通8号线一期工程2标-出入段线北1线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "771eebfd4ddd487985d8d84f27460e09",
+          "lineName": "成都轨道交通8号线一期工程2标-顺三区间左线",
+          "followStatus": 1
+        },
+		{
+          "lineId": "1740b5423bba475b8c284bd6037afaae",
+          "lineName": "西安地铁9-1标-纺香区间左线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "fcf96fb1a1aa44a1914f70c408937901",
+          "lineName": "西安地铁9-1标-纺香区间右线",
+          "followStatus": 1
+        },
+		{
+          "lineId": "16120001000101",
+          "lineName": "北京地铁8号线三期工程土建施工04标工程-前珠区间左线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "16120001000102",
+          "lineName": "北京地铁8号线三期工程土建施工04标工程-前珠区间右线",
+          "followStatus": 1
+        }
+      ]
+    },
+    {
+
+      "city": "武汉市",
+      "projectList": [
+        {
+          "lineId": "16112cd9d9d44552a283f081c11e58e0",
+          "lineName": "武汉市轨道交通二号线南延线第六标段土建工程-秀藏区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "51d14ba50a8f448ba069b084b5ff5174",
+          "lineName": "武汉市轨道交通二号线南延线第六标段土建工程-秀藏区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "广州市",
+      "projectList": [
+        {
+          "lineId": "e5f01e747059442fb0f3f4544a02f17b",
+          "lineName": "广州市轨道交通十一号线11305标-轨沙区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "f4857c331b524499b0a9099e00f09761",
+          "lineName": "广州市轨道交通十一号线11305标-轨沙区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "广西南宁市",
+      "projectList": [
+        {
+          "lineId": "27ac46475cb44635ac4f01a944aa8bc1",
+          "lineName": "南宁市轨道交通3号线02标土建8工区工程-金埌区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "72715bf7040f4aa8b3f3ae14c648c452",
+          "lineName": "南宁市轨道交通3号线02标土建8工区工程-青青区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "735e755177bd4291997bcde25a79574e",
+          "lineName": "南宁市轨道交通3号线02标土建8工区工程-青青区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "94d9e9af9876494d95e302775a5a3333",
+          "lineName": "南宁市轨道交通3号线02标土建8工区工程-埌青区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "cc9878e1ab444b6a8c8e3efb121f9ecf",
+          "lineName": "南宁市轨道交通3号线02标土建8工区工程-金埌区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "e008cf54fa46454fb7e3fd358278d363",
+          "lineName": "南宁市轨道交通3号线02标土建8工区工程-埌青区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "成都市",
+      "projectList": [
+        {
+          "lineId": "5db28567bfac4ffb8839462cf59e74e9",
+          "lineName": "成都轨道交通8号线一期工程2标-出入段线南线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "46934101de5e4cde96cc39b04f9b9486",
+          "lineName": "成都轨道交通8号线一期工程2标-出入段线北1线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "771eebfd4ddd487985d8d84f27460e09",
+          "lineName": "成都轨道交通8号线一期工程2标-顺三区间左线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "7c8fb5e2e147466295cba9d046ded6e0",
+          "lineName": "成都轨道交通8号线一期工程2标-出入段线北2线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "7cad4fe48a84486c9258c6fd4fe581c8",
+          "lineName": "成都轨道交通8号线一期工程2标-石庆区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "a3a580a6479a4ca8a9e05a1a14016773",
+          "lineName": "成都轨道交通8号线一期工程2标-石庆区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "cf51c5ae7831437283608ae6c6c5b212",
+          "lineName": "成都轨道交通8号线一期工程2标-顺三区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "西安市",
+      "projectList": [
+        {
+          "lineId": "1740b5423bba475b8c284bd6037afaae",
+          "lineName": "西安地铁9-1标-纺香区间左线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "fcf96fb1a1aa44a1914f70c408937901",
+          "lineName": "西安地铁9-1标-纺香区间右线",
+          "followStatus": 1
+        }
+      ]
+    },
+    {
+      "city": "兰州市",
+      "projectList": [
+        {
+          "lineId": "15090008000301",
+          "lineName": "兰州1号线TJⅢ-12A标-盘旋路站~五里铺站左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "15090008000302",
+          "lineName": "兰州1号线TJⅢ-12A标-盘旋路站~五里铺站右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "15090008000701",
+          "lineName": "兰州1号线TJⅢ-12A标-盘旋路～东方红广场左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "15090008000702",
+          "lineName": "兰州1号线TJⅢ-12A标-盘旋路～东方红广场右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "北京市",
+      "projectList": [
+        {
+          "lineId": "16120001000101",
+          "lineName": "北京地铁8号线三期工程土建施工04标工程-前珠区间左线",
+          "followStatus": 1
+        },
+        {
+          "lineId": "16120001000102",
+          "lineName": "北京地铁8号线三期工程土建施工04标工程-前珠区间右线",
+          "followStatus": 1
+        }
+      ]
+    },
+    {
+      "city": "上海市",
+      "projectList": [
+        {
+          "lineId": "02462b43088d4078a2ada94b2f9aa575",
+          "lineName": "上海轨道交通18号线工程土建工程5标-中下区间下行左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "472d2f0881ae4825aa0797e8d0395b26",
+          "lineName": "上海轨道交通18号线工程土建工程5标-沈~工区间出场线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "96587a848acc4848a3954b4688f9b587",
+          "lineName": "上海轨道交通18号线工程土建工程5标-繁沈区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "9eb7ce2077f94188ad1bfcfe7ef82229",
+          "lineName": "上海轨道交通18号线工程土建工程5标-中下区间上行右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "ade1d49c774041cb82a432014919e339",
+          "lineName": "上海轨道交通18号线工程土建工程5标-繁沈区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "b206650cd2b54c93889ebad4311283f6",
+          "lineName": "上海轨道交通18号线工程土建工程5标-繁沈区间中下右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "ba5e40a2ea2e49eba816a3ddfa97350e",
+          "lineName": "上海轨道交通18号线工程土建工程5标-沈中区间下行左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "bf15ebaa43684456ae9e161182244bd4",
+          "lineName": "上海轨道交通18号线工程土建工程5标-沈~工区间入场线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "d1d13862bb4440e19dd9075d579d8a58",
+          "lineName": "上海轨道交通18号线工程土建工程5标-沈中区间上行右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "长春市",
+      "projectList": [
+        {
+          "lineId": "15090006000101",
+          "lineName": "长春1号线9标-长北区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "15090006000102",
+          "lineName": "长春1号线9标-长北区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "南京市",
+      "projectList": [
+        {
+          "lineId": "3d86a874b16448ffb3ae080169439e9d",
+          "lineName": "南京地铁河西九号D7-TA01标-螺高区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "9298700c83384d35874260c53448d14b",
+          "lineName": "南京地铁河西九号D7-TA01标-螺高区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "20543bb6f66943778b58f3ba6f4a3b58",
+          "lineName": "南京地铁河西九号D7-TA01标-高永区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "7e57b3623c89421f8528c8421c7ed4f0",
+          "lineName": "南京地铁河西九号D7-TA01标-高永区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "无锡市",
+      "projectList": [
+        {
+          "lineId": "9a7308735a264b86bb399c73c37e40a3",
+          "lineName": "无锡地铁3号线05标土建施工工程-无山区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "7dcd9f5f5346498eb8f30cba0eb4ecc5",
+          "lineName": "无锡地铁3号线05标土建施工工程-山靖区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "8c67d287b8614a6bb1607e335a3c862b",
+          "lineName": "无锡地铁3号线05标土建施工工程-无山区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "a1bd74c1753a421fb3b7faaf4ce03373",
+          "lineName": "无锡地铁3号线05标土建施工工程-山靖区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "苏州市",
+      "projectList": [
+        {
+          "lineId": "31606ea9f47742fa8132f4b1e6c38660",
+          "lineName": "苏州市轨道交通3号线工程土建施工项目Ⅲ-TS-15标工程-娄～跨区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "6f86f2e146ea4bf7bc4ba92195b9d4d4",
+          "lineName": "苏州市轨道交通3号线工程土建施工项目Ⅲ-TS-15标工程-跨～汇区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "90f43d73cb974cf4bb7ce2708573c4e6",
+          "lineName": "苏州市轨道交通3号线工程土建施工项目Ⅲ-TS-15标工程-娄～跨区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "bd4e2b994ff6402db0c630893b479f23",
+          "lineName": "苏州市轨道交通3号线工程土建施工项目Ⅲ-TS-15标工程-跨～汇区间左线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "重庆市",
+      "projectList": [
+        {
+          "lineId": "15120001000101",
+          "lineName": "重庆10号线7标BT-同一区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "15120001000102",
+          "lineName": "重庆10号线7标BT-同一区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "杭州市",
+      "projectList": [
+        {
+          "lineId": "18b242737eb9456d8d81b7e89988b3c7",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-莫巨区间莫-益右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "76df42c71b1e4eacb3142f66efe794b3",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-莫巨区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "93ba96801de8488498633c49a2c162fb",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-益莫区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "96cd4c5eba2e4a2c9ebb2d6278d68b45",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-莫巨区间莫-益左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "96f50cec5cfa42b6b3f1294d6d64beb7",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-莫巨区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "97a8893e5caf45bebd95b37c748a768f",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-莫巨区间莫益右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "aff995ba0223481eb49cae0fa3087a5f",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-益莫区间莫--益右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "b90d7ffcecd4429ab6834c83b732533d",
+          "lineName": "杭州地铁5号线一期工程土建施工SG5-7标-莫巨区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "福州市",
+      "projectList": [
+        {
+          "lineId": "560925a8ae8c4d6ea9217b0b1e35f7c8",
+          "lineName": "福州地铁6号线土建2标4工区项目-鹤沙区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "63d134a4824b445ca063a2da08c3fcb4",
+          "lineName": "福州地铁6号线土建2标4工区项目-中~莲区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "9e213dbda99043eb8a7b73303d1ae225",
+          "lineName": "福州地铁6号线土建2标4工区项目-中~莲区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "eb54fb0c9aed4145863861041a294bf8",
+          "lineName": "福州地铁6号线土建2标4工区项目-鹤沙区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "厦门市",
+      "projectList": [
+        {
+          "lineId": "2d80613b54584c24ae020210f0cb8381",
+          "lineName": "厦门本岛至翔安过海段二工区工程-刘东区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "a1bd74c1753a421fb3b7faaf4ce03372",
+          "lineName": "厦门本岛至翔安过海段二工区工程-刘东区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "bf7201a192494a0494970ad5dd27b116",
+          "lineName": "厦门本岛至翔安过海段二工区工程-五刘区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "f319f1b292424052bca3359b7505d9d7",
+          "lineName": "厦门本岛至翔安过海段二工区工程-刘东区间左线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "南昌市",
+      "projectList": [
+        {
+          "lineId": "5993aea1f4c4453d933bd9064f39b51e",
+          "lineName": "南昌轨道交通2号线-青福区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "5fcfa9bde98e4336a72b70a8125ea70c",
+          "lineName": "南昌轨道交通2号线-青福区间右线",
+          "followStatus": 0
+        }
+      ]
+    },
+    {
+      "city": "青岛市",
+      "projectList": [
+        {
+          "lineId": "bdf9f07117164246af6df9dce095da9e",
+          "lineName": "青岛地铁8号线工程PPP项目（B2包）土建03工区-3-2号风井区间左线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "026c9f75b2334a46a58d1a74c3ceacf7",
+          "lineName": "青岛地铁8号线工程PPP项目（B2包）土建03工区-3-2号风井区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "2a9a54168e70459ab8c054957e8b5008",
+          "lineName": "青岛地铁8号线工程PPP项目（B2包）土建03工区-2号井海底区间右线",
+          "followStatus": 0
+        },
+        {
+          "lineId": "91ecfdb8ffad486a8deb687795deea3a",
+          "lineName": "青岛地铁8号线工程PPP项目（B2包）土建03工区-2号井海底区间左线",
+          "followStatus": 0
+        }
+      ]
+    }
+  ],
+  "errorDescription": null
+}

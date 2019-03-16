@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="chart-name" content="环形进度条">
+    <title>盾构机进度图</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="UTF-8">
+    <link href="../../../css/bracket.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background: #FFFFFF;overflow: hidden;">
+    <span id='datanull' style="font-size:14px;color:gray;text-align:center;display:block;"></span>
+    <div id="container" style="width:100%;height: 80px;">
+    </div>
+</body>
+
+<script src="../../../lib/highcharts.js"></script>
+<script src='../../../lib/highcharts-more.js'></script>
+<script src='../../../lib/solid-gauge.js'></script>
+<script src="../../../lib/jquery-2.1.4.min.js"></script>
+<script src="../../../lib/underscore.js"></script>
+<script>
+    function CallJS(result){
+        var length = 0;
+        for (var i in result.data) {
+            length++;
+        }
+
+        if (length != 0) {
+            if (result.data.cumulativeRings == null || result.data.totalRings == null) {
+                document.getElementById("datanull").innerHTML = "暂无数据";
+            } else {
+
+                var cumulativeRings = new Number(result.data.cumulativeRings);
+                var totalRings = new Number(result.data.totalRings);
+                var rest = 0;
+                if (totalRings != 0) {
+                    document.getElementById("datanull").innerHTML = "";
+                    rest = Divide(cumulativeRings.valueOf(), totalRings.valueOf()).toFixed(3);
+                    rest = Multiply(rest, 100);
+                    initChart();
+                } else {
+                    document.getElementById("datanull").innerHTML = "数据有误";
+                }
+            }
+        } else {
+            document.getElementById("datanull").innerHTML = "暂无数据";
+        }
+
+        function Multiply(arg1, arg2) {
+            var r1 = arg1.toString(),
+                r2 = arg2.toString(),
+                m, resultVal, d = arguments[2];
+            m = (r1.split(".")[1] ? r1.split(".")[1].length : 0) + (r2.split(".")[1] ? r2.split(".")[1].length :
+                0);
+            resultVal = Number(r1.replace(".", "")) * Number(r2.replace(".", "")) / Math.pow(10, m);
+            return typeof d !== "number" ? Number(resultVal) : Number(resultVal.toFixed(parseInt(d)));
+        }
+
+        function Divide(arg1, arg2) {
+            var r1 = arg1.toString(),
+                r2 = arg2.toString(),
+                m, resultVal, d = arguments[2];
+            m = (r2.split(".")[1] ? r2.split(".")[1].length : 0) - (r1.split(".")[1] ? r1.split(".")[1].length :
+                0);
+            resultVal = Number(r1.replace(".", "")) / Number(r2.replace(".", "")) * Math.pow(10, m);
+            return typeof d !== "number" ? Number(resultVal) : Number(resultVal.toFixed(parseInt(d)));
+        }
+
+        function initChart() {
+            var h = $("#container").height();
+            var chart = Highcharts.chart('container', {
+                chart: {
+                    type: 'solidgauge',
+                    margin: [0, 0, 0, 0],
+                    spacing: [0, 0, 0, 0]
+                },
+                title: {
+                    text: '',
+                    style: {
+                        fontSize: '16px',
+                        color: '#000',
+                        fontWeight: 'bold',
+                        fontFamily: 'Sans-serif'
+                    },
+                },
+                tooltip: {
+                    enabled: false,
+                    borderWidth: 0,
+                    backgroundColor: 'none',
+                    shadow: false,
+                    style: {
+                        fontSize: '10px'
+                    },
+                    pointFormat: '<span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</span>',
+                    positioner: function (labelWidth) {
+                        return {
+                            x: 200 - labelWidth / 2,
+                            y: 200
+                        };
+                    }
+                },
+                pane: {
+                    startAngle: 0,
+                    endAngle: 360,
+                    background: [{ // Track for Move
+                        outerRadius: '112%',
+                        innerRadius: '88%',
+                        backgroundColor: 'rgba(232,232,232,0.5)',
+                        //Highcharts.Color(Highcharts.getOptions().colors[1]).setOpacity(0.3).get(),
+                        borderWidth: 0
+                    }]
+                },
+                yAxis: {
+                    min: 0,
+                    max: 100,
+                    lineWidth: 0,
+                    tickPositions: []
+                },
+                plotOptions: {
+                    solidgauge: {
+                        borderWidth: '7px',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        linecap: 'round',
+                        stickyTracking: false
+                    }
+                },
+                series: [{
+                    name: 'Move',
+                    // borderColor: Highcharts.getOptions().colors[1],
+                    borderColor: '#5a7bef',
+                    data: [{
+                        color: '#5a7bef',
+                        radius: '100%',
+                        innerRadius: '100%',
+                        y: rest
+                    }]
+                }]
+            }, function (c) { // 图表初始化完毕后的会调函数
+                // 环形图圆心
+                var titleHeight = parseInt(c.title.styles.fontSize);
+                // 动态设置标题位置
+                c.setTitle({
+                    y: h / 2 + titleHeight / 3
+                });
+
+                /**
+                 * In the chart load callback, add icons on top of the circular shapes
+                 */
+
+            });
+            chart.setTitle({
+                text: chart.series[0].data[0].y + '%'
+            });
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="chart-name" content="白夜班工效统计图">
+    <title>白夜班工效统计图</title>
+    <link href="../../../css/bracket.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body style="background: #FFFFFF;overflow: hidden;">
+<div>
+    <span id='datanull' style="font-size:14px;color:gray;text-align:center;display:block;"></span>
+    <div id="container" style="width: 100%;height: 250px;"></div>
+</div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+</body>
+
+<script src="../../../lib/highcharts.js"></script>
+<script src="../../../lib/jquery-2.1.4.min.js"></script>
+<script src="../../../lib/underscore.js"></script>
+<script type="text/javascript">
+   function callJS(result){
+        var data = result.data;
+        var day = _.pluck(data, 1);
+        var night = _.pluck(data, 2);
+        var date = _.pluck(data, 0);
+
+        if (data.length != 0) {
+            if (date[0] == null || date[0] === "null" || night[0] == null || day[0] == null) {
+                document.getElementById("datanull").innerHTML = "暂无数据";
+            } else {
+                $("#datanull").innerHTML = "";
+                var total = [];
+                var _temp = [];
+                for (var i in data) {
+                    total.push(data[i][1] + data[i][2]);
+                }
+                for (var j in date) {
+                    shortDate = date[j].split('-');
+                    _temp.push(shortDate[1] + '-' + shortDate[2]);
+                }
+                date = _temp;
+                initChart();
+            }
+        } else {
+            document.getElementById("datanull").innerHTML = "暂无数据";
+        }
+
+        function initChart() {
+            var chart = Highcharts.chart('container', {
+                chart: {
+                    type: 'areaspline'
+                },
+                exporting: {
+                    enabled: false
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    verticalAlign: 'bottom',
+                    itemStyle: {
+                        fontWeight: 'normal',
+                        fontSize: '15px'
+                    }
+                },
+                xAxis: {
+                    categories: date,
+                    crosshair: true,
+                    labels: {
+                        style: {
+                            fontSize: "10px"
+                        }
+                    }
+                },
+                yAxis: {
+                    title: '',
+                    allowDecimals: false,
+                    labels: {
+                        formatter: function () {
+                            return this.value;
+                        }
+                    }
+                },
+                tooltip: {
+                    valueSuffix: '环',
+                    shared: true
+                },
+                plotOptions: {
+                    areaspline: {
+                        fillOpacity: 0
+                    },
+                    series: {
+                        lineWidth: 2,
+                        marker: {
+                            enabled: false,
+                            symbol: 'circle',
+                            fillColor: '#FFFFFF',
+                            lineColor: null,
+                            states: {
+                                hover: {
+                                    fillColor: 'white',
+                                    lineWidth: 4
+                                }
+                            }
+                        }
+                    },
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: '总计',
+                    data: total,
+                    color: '#eb4e3d'
+                    // fillColor: { // 设置渐变的填充颜色
+                    //     linearGradient: {
+                    //         x1: 0,
+                    //         y1: 0,
+                    //         x2: 0,
+                    //         y2: 1
+                    //     },
+                    //     stops: [
+                    //         [0, 'rgba(119,220,255,0.7)'],
+                    //         [1, Highcharts.Color('rgba(119,220,255,0.7)').setOpacity(
+                    //             0).get('rgba')]
+                    //     ]
+                    // },
+                }, {
+                    name: '白班',
+                    data: day,
+                    color: '#fbd734'
+                    // fillColor: { // 设置渐变的填充颜色
+                    //     linearGradient: {
+                    //         x1: 0,
+                    //         y1: 0,
+                    //         x2: 0,
+                    //         y2: 1
+                    //     },
+                    //     stops: [
+                    //         [0, 'rgba(90,170,239,0.7)'],
+                    //         [1, Highcharts.Color('rgba(90,170,239,0.7)').setOpacity(
+                    //             0).get('rgba')]
+                    //     ]
+                    // },
+                }, {
+                    name: '夜班',
+                    data: night,
+                    //color: '#eb4e3d'
+                    color: '#2961f8'
+                    // fillColor: { // 设置渐变的填充颜色
+                    //     linearGradient: {
+                    //         x1: 0,
+                    //         y1: 0,
+                    //         x2: 0,
+                    //         y2: 1
+                    //     },
+                    //     stops: [
+                    //         [0, 'rgba(21,220,184,0.7)'],
+                    //         [1, Highcharts.Color('rgba(21,220,184,0.7)').setOpacity(
+                    //             0).get('rgba')]
+                    //     ]
+                    // },
+                }]
+            });
+        }
+    }
+</script>
+
+</html>
